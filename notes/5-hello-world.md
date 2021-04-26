@@ -77,7 +77,7 @@ for i in range(10):
 
 ```
 Unix: /home/username/projects/py-tests/hello-world.py
-Windows: C:/projects/py-tests/hello-world.py
+Windows: C:\projects\py-tests\hello-world.py
 ```
 
 Далее вам следует запустить файл / проект. Это зависит от того, какой инструмент для разработки вы выбрали:
