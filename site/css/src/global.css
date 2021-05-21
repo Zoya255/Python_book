@@ -1,0 +1,117 @@
+/* ------------------------------- global ------------------------------- */
+
+/* -------------------- base -------------------- */
+
+.global__body{
+	display: grid;
+	grid-template-areas: "header header  header header  header"
+						 "none1  path    path   path    none2"
+						 "none1  l_aside main   r_aside none2"
+						 "footer footer  footer footer  footer";
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 1fr auto auto auto 1fr;
+
+	margin: 0;
+	padding: 0;
+
+	min-height: 100vh;
+
+	font-family: Roboto, sans-serif;
+
+	background-color: #cccccc;
+}
+
+.global__block{
+	margin: 20px 20px 0 0;
+	padding: 10px 20px;
+
+	border-radius: 20px;
+
+	background-color: #eeeeee;
+}
+
+/* -------------------- header -------------------- */
+
+.global__header{
+	grid-area: header;
+
+	background-color: #008B8B;
+}
+.global__header-inner{
+	width: 1200px;
+
+	margin: 5px auto;
+}
+.global__header-logo{
+	font-family: Consolas, sans-serif;
+	font-size: 2em;
+	font-style: italic;
+
+	color: #eeeeee;
+}
+
+/* -------------------- path -------------------- */
+
+.global__path{
+	grid-area: path;
+}
+
+/* -------------------- left aside -------------------- */
+
+.global__left-aside{
+	grid-area: l_aside;
+
+	width: 250px;
+}
+.global__left-aside-btn-up{
+
+}
+
+/* -------------------- nav -------------------- */
+
+.global__menu{
+
+}
+.global__menu-title{
+
+}
+.global__menu-list{
+	padding-left: 20px;
+}
+.global__menu-list-item{
+
+}
+
+/* -------------------- main -------------------- */
+
+.global__main{
+	grid-area: main;
+
+	width: 950px;
+
+	padding-bottom: 20px;
+}
+.global__section-content{
+
+}
+
+/* -------------------- right aside -------------------- */
+
+.global__right-aside{
+	grid-area: r_aside;
+}
+
+/* -------------------- footer -------------------- */
+
+.global__footer{
+	grid-area: footer;
+
+	background-color: #008B8B;
+}
+.global__footer-info{
+	margin: 5px;
+
+	text-align: center;
+
+	color: #eeeeee;
+}
