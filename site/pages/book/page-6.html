@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Учебник по Python</title>
+
+        <link rel="stylesheet" href="../../css/src/global.css">
+	    <link rel="stylesheet" href="../../css/src/global-dark.css">
+    </head>
+
+    <body class="global__body">
+        <header class="global__header">
+			<div class="global__header-inner">
+				<span class="global__header-logo">
+					<a class="global__header-logo-link"
+					   href="../../index.html">
+						PyBook
+					</a>
+				</span>
+
+				<span class="global__header-links">
+		            <a class="global__header-links-link" href="../../glossary.html">глоссарий</a>
+	            </span>
+			</div>
+		</header>
+
+        <div class="global__path-wrapper">
+	        <div class="global__path global__block">
+				<a class="global__path-link" href="../../index.html">главная страница</a> / раздел 1 / глава 6
+	        </div>
+        </div>
+
+		<aside class="global__left-aside">
+			<nav class="global__menu global__block">
+				<h3 class="global__menu-title">Подпункты:</h3>
+
+				<ul class="global__menu-list">
+					<li class="global__menu-list-item">Переменная</li>
+					<li class="global__menu-list-item">Простые переменные</li>
+					<li class="global__menu-list-item">Числовые</li>
+					<li class="global__menu-list-item">Целочисленные</li>
+                    <li class="global__menu-list-item">Вещественные</li>
+                    <li class="global__menu-list-item">Комплексные</li>
+                    <li class="global__menu-list-item">Строковые</li>
+                    <li class="global__menu-list-item">Логические</li>
+                    <li class="global__menu-list-item">Типизация</li>
+					<li class="global__menu-list-item">Вопросы для проверки</li>
+				</ul>
+			</nav>
+		</aside>
+
+        <main class="global__main">
+	        <section class="global__section-content global__block">
+				<h1>6. Начнем с простого...</h1>
+
+        <p>Синтаксис — это определенная система правил написания кода.</p>
+        <p>Существует несколько определённых правил написания кода:</p>
+
+        <ul>
+            <li>каждое новое действие начинается с новой строки</li>
+            <li>уровни кода отделяются друг от друга табуляцией</li>
+            <li>табуляцию и пробелы смешивать нельзя</li>
+            <li>операторы могут отделяться друг от друга одной или несколькими пустыми строками</li>
+        </ul>
+
+        <p>Это общие правила и принципы написания кода. Более подробно ознакомиться с правилами написания кода можно при помощи
+            соглашения PEP8. Это необходимо, чтобы не было путаницы в написании кода, а был единый стиль написания.</p>
+
+        <h2>Переменная</h2>
+
+        <p>Переменная — это условно говоря &quot;коробка&quot;, в которой можно что-то хранить. Это значение можно изменить,
+            положить или забрать.</p>
+        <p>Переменные могут быть как с одним, так и с несколькими значениями. Ниже приведены примеры, как они выглядят:</p>
+
+        <pre><code class="lang-python">
+        <span class="hljs-attr">var</span> = <span class="hljs-number">5</span>
+        <span class="hljs-attr">arr</span> = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
+                    class="hljs-number">3</span> ]
+        </code></pre>
+        <p>Так же разберем принцип написания переменной. Он делится на <code>var</code> - само название переменной, знак
+            <code>=</code> - присваивание значения переменной, цифра <code>5</code> - это значение присваиваемое переменной.</p>
+        <p>Теперь разберем как они выглядят на &quot;практике&quot;:</p>
+        <pre><code class="lang-python">
+        <span class="hljs-attr">int</span> = <span class="hljs-number">100</span>
+        <span class="hljs-attr">float</span> = <span class="hljs-number">2.15</span>
+        <span class="hljs-attr">str</span> = <span class="hljs-string">"a"</span>
+        </code></pre>
+
+        <h2>Простые переменные</h2>
+
+        <p>Простые переменные хранят в себе исключительно только одно значение.</p>
+        <p>Пример: </p>
+        <pre><code class="lang-python">
+        <span class="hljs-attr">var</span> = <span class="hljs-number">5</span>
+        <span class="hljs-attr">int</span> = <span class="hljs-number">10</span>
+        <span class="hljs-attr">float</span> = <span class="hljs-number">2.25</span>
+        </code></pre>
+        <p>Простые переменные разделяются на следующие типы переменных:</p>
+
+        <h2>Числовые</h2>
+
+        <p>Числовые переменные, как может быть понятно из названия хранят в себе числовые значения. </p>
+        <p>Числовые значения бывают следующих видов:</p>
+
+          <h3>Целочисленные</h3>
+
+        <p>Целочисленные или целые числа — это числа, которые идут по порядку, будь то положительные или отрицательные.
+            Например: <code>...-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5...</code>.</p>
+        <p>Такой тип переменных обозначается <code>int</code>.</p>
+        <p>Например:</p>
+        <pre><code class="lang-python">
+        <span class="hljs-attr">int1</span> = <span class="hljs-number">5</span>
+        <span class="hljs-attr">int2</span> = <span class="hljs-number">25</span>
+        <span class="hljs-attr">int3</span> = <span class="hljs-number">255</span>
+        </code></pre>
+
+          <h3>Вещественные</h3>
+
+        <p>Вещественные числа отличаются от целых чисел наличием запятой. Такой тип числа имеет некоторые отличия от целых чисел
+            и записывается следующим образом:</p>
+        <pre><code class="lang-python">
+        <span class="hljs-attr">float1</span> = <span class="hljs-number">2.15</span>
+        <span class="hljs-attr">float2</span> = <span class="hljs-number">3.14</span>
+        <span class="hljs-attr">float3</span> = <span class="hljs-number">2.28</span>
+        </code></pre>
+        <p>Так же у вещественных чисел есть отличительные особенности:</p>
+
+        <ul>
+            <li>определённый размер (не могут быть сколь угодно большими)</li>
+            <li>неточность округления</li>
+            <li>отображение вещественных чисел со степенями</li>
+        </ul>
+
+         <h3>Комплексные</h3>
+
+        <p>Комплексные числа — это числа, которые используются довольно редко, но при этом имеют место быть. отличительная их
+            особенность — наличие мнимой части <code>5j</code>. Комплексные числа состоят из <code>5 + 5j</code>, где:
+            <code>5</code> - действительная, а <code>5j</code> - мнимая части. Такие комплексные числа отображаются так:</p>
+
+        <pre><code class="lang-python">
+        <span class="hljs-attr">complex1</span> = <span class="hljs-number">2</span> + <span
+                class="hljs-number">2</span>j
+        <span class="hljs-attr">complex2</span> = <span class="hljs-number">1</span>j
+        <span class="hljs-attr">complex3</span> = <span class="hljs-number">45</span> + <span class="hljs-number">0</span>j
+        </code></pre>
+
+        <h2>Строковые</h2>
+
+        <p>Строковые переменные — хранят в себе строку любой длины. В данную переменную можно впихнуть как пару букв, слово,
+            предложение или целый текст. Основная отличительная особенность от числовых переменных — это кавычки, в которых
+            написаны ваши символы. Если вы хотите написать и текст и цифры сразу, но не смешивая их, то можно прибегнуть к
+            данному виду записи (т.е. формату JSON):</p>
+
+        <pre><code class="lang-python"><span class="hljs-attr">str1</span> = <span
+                class="hljs-string">'{ "example": 0123 }'</span>
+        </code></pre>
+        <p>Такой строковый тип отображается как <code>str</code> или <code>string</code>:</p>
+        <pre><code class="lang-python">
+        <span class="hljs-attr">str1</span> = <span class="hljs-string">"a"</span>
+        <span class="hljs-attr">str2</span> = <span class="hljs-string">"abc"</span>
+        <span class="hljs-attr">str3</span> = <span class="hljs-string">"abc abc"</span>
+        </code></pre>
+
+        <h2>Логические</h2>
+
+        <p>Как может стать понятно из названия, здесь переменные &quot;отвечают&quot; на запрос правда или ложь. Данные
+            переменные могут принять только два значения - <code>True</code> - правда или <code>False</code> - ложь.</p>
+        <p>Такой тип переменных обозначается следующим образом:</p>
+        <pre><code class="lang-python">
+        <span class="hljs-attr">bool1</span> = <span class="hljs-literal">True</span>
+        <span class="hljs-attr">bool2</span> = <span class="hljs-literal">False</span>
+        </code></pre>
+
+        <h2>Типизация</h2>
+
+        <h3>Динамическая</h3>
+
+        <p>Динамическая типизация необходима для правильного отображения переменных. Рассмотрим следующие виды &quot;оберток&quot;:</p>
+
+        <ul>
+            <li>если объект находится в одинарных или двойных кавычках, например: <code>&#39;abc abc&#39;</code> <code>&quot;abc
+                abc&quot;</code> - это строка даже если внутри кавычек числа
+            </li>
+        </ul>
+
+        <p>объект может быть без кавычек только в двух случаях:</p>
+
+        <ul>
+            <li>если это цифры, например: <code>5</code>, <code>2.25</code> или <code>2 + 2j</code></li>
+            <li>или если это логически типизированное значение, например: <code>True</code> или <code>False</code></li>
+        </ul>
+
+        <h3>Динамически строгая</h3>
+
+        <p>В данном случае динамически строгая типизация означает, что тип, который был использован при создании переменной не
+            будет изменяться.</p>
+        <p>Это необходимо для:</p>
+
+        <ul>
+            <li>исключения необходимости постоянного вычисления переменной</li>
+            <li>для исключения смены типа переменной</li>
+            <li>исключения беспричинной смены типа переменной</li>
+        </ul>
+
+        <h3>Неявные</h3>
+
+        <p>Данный тип преобразования — изменение типа переменной без явного указания на преобразования.</p>
+        <p>Например, какой тип у переменных <code>x</code> и <code>y</code>?</p>
+        <pre><code class="lang-python">
+        <span class="hljs-attr">int1</span> = <span class="hljs-number">5</span>
+        <span class="hljs-attr">int2</span> = <span class="hljs-number">15</span>
+        <span class="hljs-attr">float</span> = <span class="hljs-number">0.25</span>
+
+        <span class="hljs-attr">x</span> = int1 + float
+        <span class="hljs-attr">y</span> = int1 / int2
+        </code></pre>
+
+        <p>Ответ: <code>float</code>, не зависимо от того, что производились взаимодействия двух разных типов. Сейчас произошло
+            неявное преобразование. По другому говоря изменение &quot;на лету&quot;.</p>
+        <p>Например, <code>float</code> + <code>int</code> дают всегда <code>float</code>, даже если было преобразование в
+            <code>int</code>.</p>
+        <p>Данные преобразования логичны и необходимы для выполнения различных операций без потерь. </p>
+        <h3>Явные</h3>
+        <p>Явное преобразование типа — изменение типа переменной при явном указании функции.</p>
+        <p>Такое преобразование производится при помощи функций. Например, изменение <code>float</code> в <code>int</code>:</p>
+        <pre><code class="lang-shell"><span class="hljs-meta">&gt;&gt;</span>&gt; int(<span class="hljs-number">5.0</span>)
+        <span class="hljs-number">5</span>
+        </code></pre>
+        <p>Какие могут быть преобразования:</p>
+
+        <h4>1. int</h4>
+
+        <p>Тип <code>int</code> можно преобразовать из <code>float</code> или <code>str</code>:</p>
+        <pre>
+        <code class="lang-python">to_int1 = <span class="hljs-built_in">int</span>(<span
+                class="hljs-number">5.0</span>)  <span class="hljs-meta"># 5</span>
+        to_int2 = <span class="hljs-built_in">int</span>(<span class="hljs-string">'5'</span>)  <span
+                    class="hljs-meta"># 5</span>
+        </code></pre>
+
+        <h4>2. float</h4>
+
+        <p>Тип <code>float</code> можно преобразовать из <code>int</code> или <code>str</code>:</p>
+        <pre>
+        <code class="lang-python">to_float1 = <span class="hljs-type">float</span>(<span class="hljs-number">5</span>)      # <span
+                class="hljs-number">5.0</span>
+        to_float2 = <span class="hljs-type">float</span>('<span class="hljs-number">5</span>')    # <span class="hljs-number">5.0</span>
+        to_float3 = <span class="hljs-type">float</span>('<span class="hljs-number">5.0</span>')  # <span class="hljs-number">5.0</span>
+        </code></pre>
+
+        <h4>3. complex</h4>
+
+        <p>Тип <code>complex</code> можно преобразовать из <code>int</code>, <code>float</code>, <code>str</code> или их смеси:
+        </p>
+        <pre>
+        <code class="lang-python">to_complex1 = complex(<span class="hljs-number">5</span>)               # <span
+                class="hljs-number">5</span>+<span class="hljs-number">0</span>j
+        to_complex2 = complex(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>)           # <span
+                    class="hljs-number">5</span>+<span class="hljs-number">10</span>j
+        to_complex3 = complex(<span class="hljs-number">2.25</span>)            # <span class="hljs-number">2.25</span>+<span
+                    class="hljs-number">0</span>j
+        to_complex4 = complex(<span class="hljs-number">2.25</span>, <span class="hljs-number">5</span>)         # <span
+                    class="hljs-number">2.25</span>+<span class="hljs-number">5</span>j
+        to_complex5 = complex('<span class="hljs-number">5</span>')             # <span class="hljs-number">5</span>+<span
+                    class="hljs-number">0</span>j
+        to_complex6 = complex('<span class="hljs-number">5</span>', '<span class="hljs-number">10</span>')       # <span
+                    class="hljs-number">5</span>+<span class="hljs-number">10</span>j
+        to_complex7 = complex('<span class="hljs-number">2.25</span>')          # <span class="hljs-number">2.25</span>+<span
+                    class="hljs-number">0</span>j
+        to_complex8 = complex('<span class="hljs-number">2.25</span>', '<span class="hljs-number">3.25</span>')  # <span
+                    class="hljs-number">2.25</span>+<span class="hljs-number">3.25</span>j
+        </code></pre>
+
+        <h4>4. str</h4>
+
+        <p>В тип <code>str</code> может преобразовать любой другой тип:</p>
+        <pre><code class="lang-python">
+        <span class="hljs-attr">to_str1</span> = str(<span class="hljs-number">5</span>)          # <span
+                class="hljs-string">'5'</span>
+        <span class="hljs-attr">to_str2</span> = str(<span class="hljs-number">5.0</span>)        # <span class="hljs-string">'5.0'</span>
+        <span class="hljs-attr">to_str3</span> = str(<span class="hljs-number">5</span>+<span class="hljs-number">5</span>j)       # <span
+                    class="hljs-string">'(5+5j)'</span>
+        <span class="hljs-attr">to_str4</span> = str([<span class="hljs-number">1</span>, <span
+                    class="hljs-number">2</span>, <span class="hljs-number">3</span>])  # <span class="hljs-string">'([1, 2, 3])'</span>
+        <span class="hljs-attr">to_str5</span> = str(<span class="hljs-literal">False</span>)      # <span class="hljs-string">'False'</span>
+        <span class="hljs-attr">to_str6</span> = str(<span class="hljs-string">'abc'</span>)      # <span class="hljs-string">'abc'</span>
+        </code></pre>
+
+        <h4>5. bool</h4>
+
+        <p>В тип <code>bool</code> можно преобразовать любой другой тип:</p>
+        <pre><code class="lang-python">
+        <span class="hljs-attr">to_bool</span>   = bool()           # <span class="hljs-literal">False</span>
+        <span class="hljs-attr">to_bool1</span>  = bool(<span class="hljs-number">1</span>)          # <span
+                    class="hljs-literal">True</span>
+        <span class="hljs-attr">to_bool2</span>  = bool(<span class="hljs-number">0</span>)          # <span
+                    class="hljs-literal">False</span>
+        <span class="hljs-attr">to_bool3</span>  = bool(<span class="hljs-number">1.0</span>)        # <span
+                    class="hljs-literal">True</span>
+        <span class="hljs-attr">to_bool4</span>  = bool(<span class="hljs-number">0.0</span>)        # <span
+                    class="hljs-literal">False</span>
+        <span class="hljs-attr">to_bool5</span>  = bool(<span class="hljs-number">1</span>+<span class="hljs-number">1</span>j)       # <span
+                    class="hljs-literal">True</span>
+        <span class="hljs-attr">to_bool6</span>  = bool(<span class="hljs-number">0</span>+<span class="hljs-number">0</span>j)       # <span
+                    class="hljs-literal">False</span>
+        <span class="hljs-attr">to_bool7</span>  = bool([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
+                    class="hljs-number">3</span>])  # <span class="hljs-literal">True</span>
+        <span class="hljs-attr">to_bool8</span>  = bool([])         # <span class="hljs-literal">False</span>
+        <span class="hljs-attr">to_bool9</span>  = bool(<span class="hljs-literal">True</span>)       # <span
+                    class="hljs-literal">True</span>
+        <span class="hljs-attr">to_bool10</span> = bool(<span class="hljs-literal">False</span>)      # <span
+                    class="hljs-literal">False</span>
+        <span class="hljs-attr">to_bool11</span> = bool(<span class="hljs-string">'abc'</span>)      # <span
+                    class="hljs-literal">True</span>
+        <span class="hljs-attr">to_bool12</span> = bool(<span class="hljs-string">''</span>)         # <span
+                    class="hljs-literal">False</span>
+        </code></pre>
+	        </section>
+        </main>
+
+        <aside class="global__right-aside">
+
+        </aside>
+
+        <footer class="global__footer">
+			<p class="global__footer-info">Create by Zoya</p>
+	        <p class="global__footer-info">2021</p>
+        </footer>
+    </body>
+</html>
