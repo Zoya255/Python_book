@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="../../css/src/global.css">
 	    <link rel="stylesheet" href="../../css/src/global-dark.css">
 		<link rel="stylesheet" href="../../css/src/global-media.css">
+
+		<link rel="stylesheet" href="../../css/ext/monokai.css">
     </head>
 
     <body class="global__body">
@@ -83,15 +85,10 @@
 <p>Во время выполнения команды <code>python</code>. При условии, что установка прошла верно, то вы увидите что-то подобное:</p>
 
 <pre><code class="lang-shell">
-$  python
-Python <span class="hljs-number">3.9</span><span class="hljs-meta">.1</span> (tags/v3<span
-			class="hljs-meta">.9</span><span class="hljs-meta">.1</span>:1e5d33e, <span class="hljs-keyword">Dec</span>  <span
-			class="hljs-number">7</span> <span class="hljs-number">2020</span>, <span
-			class="hljs-number">17</span>:<span class="hljs-number">08</span>:<span class="hljs-number">21</span>) [MSC v<span
-			class="hljs-meta">.1927</span> <span class="hljs-number">64</span> bit (AMD64)] on win32
-Type <span class="hljs-string">"help"</span>, <span class="hljs-string">"copyright"</span>, <span class="hljs-string">"credits"</span> <span
-			class="hljs-keyword">or</span> <span class="hljs-string">"license"</span> for more information.
-&gt;&gt;&gt;
+<span class="hljs-meta">$</span>  python
+Python 3.9.1 (tags/v3.9.1:1e5d33e, Dec 7 2020, 17:08:21) [MSC v.1927 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+<span class="hljs-meta">&gt;&gt;&gt;</span>
 </code></pre>
 
 <blockquote>
@@ -113,7 +110,7 @@ Type <span class="hljs-string">"help"</span>, <span class="hljs-string">"copyrig
 <p>Как это выглядит в консоли:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; print(<span class="hljs-string">"Hello World!"</span>)
+<span class="hljs-meta">&gt;&gt;&gt;</span> <span class="hljs-keyword">print</span>(<span class="hljs-string">"Hello World!"</span>)
 Hello World!
 </code></pre>
 
@@ -133,7 +130,7 @@ Hello World!
 <p>Путь к нашей папке будет выглядеть примерно так:</p>
 
 <pre><code>
-E:<span class="hljs-symbol">\P</span>ython<span class="hljs-symbol">\h</span>ello_world<span class="hljs-symbol">\h</span>ello_world.py
+E:\Python\hello_world\hello_world.py
 </code></pre>
 
 <p>Далее запускаем сам проект. Так как мы пользуемся текстовым редактором, то просто открываем файл.</p>
@@ -148,7 +145,8 @@ E:<span class="hljs-symbol">\P</span>ython<span class="hljs-symbol">\h</span>ell
 
 <p>В данном случае мы открываем терминал в данной папке и выполняем в нем команду <code>python</code>, а через пробел — название файла которое необходимо запустить (<code>hello-world.py</code>). Вот, что должно получиться:</p>
 
-<pre><code class="lang-shell">$ python hello_world<span class="hljs-selector-class">.py</span>
+<pre><code>
+<span class="hljs-meta">$</span> python hello_world.py
 Hello World!
 </code></pre>
 

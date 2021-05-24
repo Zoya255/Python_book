@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="../../css/src/global.css">
 	    <link rel="stylesheet" href="../../css/src/global-dark.css">
         <link rel="stylesheet" href="../../css/src/global-media.css">
+
+        <link rel="stylesheet" href="../../css/ext/monokai.css">
     </head>
 
     <body class="global__body">
@@ -237,7 +239,7 @@
 <p>Такое преобразование производится при помощи функций. Например, изменение <code>float</code> в <code>int</code>:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; int(<span class="hljs-number">5.0</span>)
+<span class="hljs-meta">&gt;&gt;&gt;</span> int(<span class="hljs-number">5.0</span>)
 <span class="hljs-number">5</span>
 </code></pre>
 
@@ -257,9 +259,9 @@ to_int2 = <span class="hljs-built_in">int</span>(<span class="hljs-string">'5'</
 <p>Тип <code>float</code> можно преобразовать из <code>int</code> или <code>str</code>:</p>
 
 <pre><code class="lang-python">
-to_float1 = <span class="hljs-type">float</span>(<span class="hljs-number">5</span>)      # <span class="hljs-number">5.0</span>
-to_float2 = <span class="hljs-type">float</span>('<span class="hljs-number">5</span>')    # <span class="hljs-number">5.0</span>
-to_float3 = <span class="hljs-type">float</span>('<span class="hljs-number">5.0</span>')  # <span class="hljs-number">5.0</span>
+to_float1 = <span class="hljs-built_in">float</span>(<span class="hljs-number">5</span>)      # <span class="hljs-number">5.0</span>
+to_float2 = <span class="hljs-built_in">float</span>('<span class="hljs-number">5</span>')    # <span class="hljs-number">5.0</span>
+to_float3 = <span class="hljs-built_in">float</span>('<span class="hljs-number">5.0</span>')  # <span class="hljs-number">5.0</span>
 </code></pre>
 
 <h4>3. complex</h4>
@@ -267,14 +269,14 @@ to_float3 = <span class="hljs-type">float</span>('<span class="hljs-number">5.0<
 <p>Тип <code>complex</code> можно преобразовать из <code>int</code>, <code>float</code>, <code>str</code> или их смеси:</p>
 
 <pre><code class="lang-python">
-to_complex1 = complex(<span class="hljs-number">5</span>)               # <span class="hljs-number">5</span>+<span class="hljs-number">0</span>j
-to_complex2 = complex(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>)           # <span class="hljs-number">5</span>+<span class="hljs-number">10</span>j
-to_complex3 = complex(<span class="hljs-number">2.25</span>)            # <span class="hljs-number">2.25</span>+<span class="hljs-number">0</span>j
-to_complex4 = complex(<span class="hljs-number">2.25</span>, <span class="hljs-number">5</span>)         # <span class="hljs-number">2.25</span>+<span class="hljs-number">5</span>j
-to_complex5 = complex('<span class="hljs-number">5</span>')             # <span class="hljs-number">5</span>+<span class="hljs-number">0</span>j
-to_complex6 = complex('<span class="hljs-number">5</span>', '<span class="hljs-number">10</span>')       # <span class="hljs-number">5</span>+<span class="hljs-number">10</span>j
-to_complex7 = complex('<span class="hljs-number">2.25</span>')          # <span class="hljs-number">2.25</span>+<span class="hljs-number">0</span>j
-to_complex8 = complex('<span class="hljs-number">2.25</span>', '<span class="hljs-number">3.25</span>')  # <span class="hljs-number">2.25</span>+<span class="hljs-number">3.25</span>j
+to_complex1 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">5</span>)               # <span class="hljs-number">5</span>+<span class="hljs-number">0</span>j
+to_complex2 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>)           # <span class="hljs-number">5</span>+<span class="hljs-number">10</span>j
+to_complex3 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">2.25</span>)            # <span class="hljs-number">2.25</span>+<span class="hljs-number">0</span>j
+to_complex4 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">2.25</span>, <span class="hljs-number">5</span>)         # <span class="hljs-number">2.25</span>+<span class="hljs-number">5</span>j
+to_complex5 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">5</span>')             # <span class="hljs-number">5</span>+<span class="hljs-number">0</span>j
+to_complex6 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">5</span>', '<span class="hljs-number">10</span>')       # <span class="hljs-number">5</span>+<span class="hljs-number">10</span>j
+to_complex7 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">2.25</span>')          # <span class="hljs-number">2.25</span>+<span class="hljs-number">0</span>j
+to_complex8 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">2.25</span>', '<span class="hljs-number">3.25</span>')  # <span class="hljs-number">2.25</span>+<span class="hljs-number">3.25</span>j
 </code></pre>
 
 <h4>4. str</h4>
@@ -282,12 +284,12 @@ to_complex8 = complex('<span class="hljs-number">2.25</span>', '<span class="hlj
 <p>В тип <code>str</code> может преобразовать любой другой тип:</p>
 
 <pre><code class="lang-python">
-<span class="hljs-attr">to_str1</span> = str(<span class="hljs-number">5</span>)          # <span class="hljs-string">'5'</span>
-<span class="hljs-attr">to_str2</span> = str(<span class="hljs-number">5.0</span>)        # <span class="hljs-string">'5.0'</span>
-<span class="hljs-attr">to_str3</span> = str(<span class="hljs-number">5</span>+<span class="hljs-number">5</span>j)       # <span class="hljs-string">'(5+5j)'</span>
-<span class="hljs-attr">to_str4</span> = str([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])  # <span class="hljs-string">'([1, 2, 3])'</span>
-<span class="hljs-attr">to_str5</span> = str(<span class="hljs-literal">False</span>)      # <span class="hljs-string">'False'</span>
-<span class="hljs-attr">to_str6</span> = str(<span class="hljs-string">'abc'</span>)      # <span class="hljs-string">'abc'</span>
+<span class="hljs-attr">to_str1</span> = <span class="hljs-built_in">str</span>(<span class="hljs-number">5</span>)          # <span class="hljs-string">'5'</span>
+<span class="hljs-attr">to_str2</span> = <span class="hljs-built_in">str</span>(<span class="hljs-number">5.0</span>)        # <span class="hljs-string">'5.0'</span>
+<span class="hljs-attr">to_str3</span> = <span class="hljs-built_in">str</span>(<span class="hljs-number">5</span>+<span class="hljs-number">5</span>j)       # <span class="hljs-string">'(5+5j)'</span>
+<span class="hljs-attr">to_str4</span> = <span class="hljs-built_in">str</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])  # <span class="hljs-string">'([1, 2, 3])'</span>
+<span class="hljs-attr">to_str5</span> = <span class="hljs-built_in">str</span>(<span class="hljs-literal">False</span>)      # <span class="hljs-string">'False'</span>
+<span class="hljs-attr">to_str6</span> = <span class="hljs-built_in">str</span>(<span class="hljs-string">'abc'</span>)      # <span class="hljs-string">'abc'</span>
 </code></pre>
 
 <h4>5. bool</h4>
@@ -295,19 +297,19 @@ to_complex8 = complex('<span class="hljs-number">2.25</span>', '<span class="hlj
 <p>В тип <code>bool</code> можно преобразовать любой другой тип:</p>
 
 <pre><code class="lang-python">
-<span class="hljs-attr">to_bool</span>   = bool()           # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool1</span>  = bool(<span class="hljs-number">1</span>)          # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool2</span>  = bool(<span class="hljs-number">0</span>)          # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool3</span>  = bool(<span class="hljs-number">1.0</span>)        # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool4</span>  = bool(<span class="hljs-number">0.0</span>)        # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool5</span>  = bool(<span class="hljs-number">1</span>+<span class="hljs-number">1</span>j)       # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool6</span>  = bool(<span class="hljs-number">0</span>+<span class="hljs-number">0</span>j)       # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool7</span>  = bool([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])  # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool8</span>  = bool([])         # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool9</span>  = bool(<span class="hljs-literal">True</span>)       # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool10</span> = bool(<span class="hljs-literal">False</span>)      # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool11</span> = bool(<span class="hljs-string">'abc'</span>)      # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool12</span> = bool(<span class="hljs-string">''</span>)         # <span class="hljs-literal">False</span>
+<span class="hljs-attr">to_bool</span>   = <span class="hljs-built_in">bool</span>()           # <span class="hljs-literal">False</span>
+<span class="hljs-attr">to_bool1</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">1</span>)          # <span class="hljs-literal">True</span>
+<span class="hljs-attr">to_bool2</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">0</span>)          # <span class="hljs-literal">False</span>
+<span class="hljs-attr">to_bool3</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">1.0</span>)        # <span class="hljs-literal">True</span>
+<span class="hljs-attr">to_bool4</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">0.0</span>)        # <span class="hljs-literal">False</span>
+<span class="hljs-attr">to_bool5</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">1</span>+<span class="hljs-number">1</span>j)       # <span class="hljs-literal">True</span>
+<span class="hljs-attr">to_bool6</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">0</span>+<span class="hljs-number">0</span>j)       # <span class="hljs-literal">False</span>
+<span class="hljs-attr">to_bool7</span>  = <span class="hljs-built_in">bool</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])  # <span class="hljs-literal">True</span>
+<span class="hljs-attr">to_bool8</span>  = <span class="hljs-built_in">bool</span>([])         # <span class="hljs-literal">False</span>
+<span class="hljs-attr">to_bool9</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-literal">True</span>)       # <span class="hljs-literal">True</span>
+<span class="hljs-attr">to_bool10</span> = <span class="hljs-built_in">bool</span>(<span class="hljs-literal">False</span>)      # <span class="hljs-literal">False</span>
+<span class="hljs-attr">to_bool11</span> = <span class="hljs-built_in">bool</span>(<span class="hljs-string">'abc'</span>)      # <span class="hljs-literal">True</span>
+<span class="hljs-attr">to_bool12</span> = <span class="hljs-built_in">bool</span>(<span class="hljs-string">''</span>)         # <span class="hljs-literal">False</span>
 </code></pre>
 	        </section>
         </main>
