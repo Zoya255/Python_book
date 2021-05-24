@@ -1,0 +1,26 @@
+/* ------------------------------- global dark ------------------------------- */
+
+/* -------------------- base -------------------- */
+
+.global__body{
+    background-color: #333333;
+}
+
+.global__block{
+    background-color: #666666;
+    color: #eeeeee;
+}
+/* -------------------- path -------------------- */
+
+.global__path-wrapper {
+    background-color: #333333;
+}
+.global__path-link{
+    color: #87CEFA;
+}
+
+/* -------------------- content -------------------- */
+
+.global__section-content a{
+	color: #87CEFA;
+}
