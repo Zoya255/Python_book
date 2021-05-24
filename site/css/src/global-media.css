@@ -1,0 +1,104 @@
+/* ------------------------------- global media ------------------------------- */
+
+/* -------------------- base -------------------- */
+
+@media screen and (max-width: 1200px) {
+
+	.global__body{
+		grid-template-areas: "header  header header"
+						     "path    path   path"
+						     "l_aside main   r_aside"
+						     "footer  footer footer";
+		grid-template-rows: auto auto 1fr auto;
+		grid-template-columns: 1fr auto auto auto 1fr;
+	}
+
+}
+@media screen and (max-width: 700px) {
+
+	.global__body{
+		grid-template-areas: "header"
+						     "path"
+						     "l_aside"
+							 "main"
+						     "footer";
+		grid-template-rows: auto auto auto 1fr auto;
+		grid-template-columns: 1fr;
+	}
+
+	.global__block{
+		margin-left: 20px;
+	}
+
+}
+
+/* -------------------- header -------------------- */
+
+@media screen and (max-width: 1200px) {
+
+	.global__header-inner{
+		width: 100%;
+
+		margin-left: 40px;
+	}
+
+}
+
+/* -------------------- path -------------------- */
+
+@media screen and (max-width: 1200px) {
+
+	.global__path{
+		margin-left: 20px;
+	}
+
+}
+@media screen and (max-width: 700px) {
+
+	.global__path-wrapper{
+		position: relative;
+		top: 0;
+	}
+
+}
+
+/* -------------------- left aside -------------------- */
+
+@media screen and (max-width: 700px) {
+
+	.global__left-aside{
+		width: 100%;
+
+		position: relative;
+		top: 0;
+	}
+
+}
+
+/* -------------------- menu -------------------- */
+
+@media screen and (max-width: 1200px) {
+
+	.global__menu{
+		margin-left: 20px;
+	}
+
+}
+@media screen and (max-width: 700px) {
+
+	.global__menu{
+		margin-bottom: 10px;
+	}
+
+}
+
+
+/* -------------------- main -------------------- */
+
+@media screen and (max-width: 1200px) {
+
+	.global__main{
+		width: 100%;
+	}
+
+}
