@@ -37,5 +37,9 @@
 	margin-left: 25px;
 	padding: 3px 10px;
 
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+
 	border-left: 5px solid #87CEFA;
+	background-color: rgba(0, 0, 0, 0.3);
 }
