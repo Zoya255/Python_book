@@ -135,6 +135,10 @@
 
 /* -------------------- content -------------------- */
 
+.global__section-content .indent{
+	margin-left: 40px;
+}
+
 .global__section-content h1{
 	font-size: 1.65em;
 

@@ -8,6 +8,9 @@
 
         <link rel="stylesheet" href="../../css/src/global.css">
 	    <link rel="stylesheet" href="../../css/src/global-dark.css">
+		<link rel="stylesheet" href="../../css/src/global-media.css">
+
+	    <link rel="stylesheet" href="../../css/ext/monokai.css">
     </head>
 
     <body class="global__body">
@@ -28,7 +31,7 @@
 
         <div class="global__path-wrapper">
 	        <div class="global__path global__block">
-				<a class="global__path-link" href="../../index.html">главная страница</a> / раздел 1 / глава 6
+				<a class="global__path-link" href="../../index.html">главная страница</a> / <a class="global__path-link" href="../section/section-2.html">раздел 2</a> / глава 7
 	        </div>
         </div>
 
@@ -45,64 +48,66 @@
 
         <main class="global__main">
 	        <section class="global__section-content global__block">
-				<h2>7. Основы массивов</h2>
+<h2>7. Основы массивов</h2>
 
-        <h3>Составные типы переменных</h3>
+<h3>Составные типы переменных</h3>
 
-        <p>Данный тип переменных позволяет хранить в себе от одного до нескольких переменных (значений). По — другому говоря,
-            такие переменные могут состоять из нескольких &quot;рядов&quot; (массивов) чисел. Такой тип переменных так же часто
-            называется коллекциями.</p>
-        <p>Массив — индексированный список элементов (чисел, других массивов, строк и так далее). Выглядит это примерно так:</p>
- <pre>
- <code class="lang-text">индекс   |<span class="hljs-string"> 0 </span>|<span class="hljs-string"> 1 </span>|<span
- class="hljs-string"> 2 </span>|<span class="hljs-string">  3 </span>|<span class="hljs-string">  4 </span>|<span class="hljs-string">  5
- </span>значение |<span class="hljs-string"> 5 </span>|<span class="hljs-string"> 10</span>|<span class="hljs-string"> 15</span>|<span class="hljs-string"> 20 </span>|<span class="hljs-string"> 25 </span>|<span class="hljs-string"> 30 </span>
- </code></pre>
-        <p>Из ряда данного массива становится понятно, что:</p>
+<p>Данный тип переменных позволяет хранить в себе от одного до нескольких переменных (значений). По — другому говоря, такие переменные могут состоять из нескольких &quot;рядов&quot; (массивов) чисел. Такой тип переменных так же часто называется коллекциями.</p>
 
-        <ul>
-            <li>индекс всегда начинается с нуля</li>
-            <li>индекс всегда идет по порядку</li>
-        </ul>
+<p>Массив — индексированный список элементов (чисел, других массивов, строк и так далее). Выглядит это примерно так:</p>
 
-        <p>Благодаря этому приобретаются следующие особенности:</p>
+<pre><code class="lang-text">
+индекс   |<span class="hljs-string"> 0 </span>|<span class="hljs-string"> 1 </span>|<span class="hljs-string"> 2 </span>|<span class="hljs-string">  3 </span>|<span class="hljs-string">  4 </span>|<span class="hljs-string">  5 </span>|
+значение |<span class="hljs-string"> 5 </span>|<span class="hljs-string"> 10</span>|<span class="hljs-string"> 15</span>|<span class="hljs-string"> 20 </span>|<span class="hljs-string"> 25 </span>|<span class="hljs-string"> 30 </span>|
+</code></pre>
 
-        <ul>
-            <li>можно легко и быстро найти необходимый элемент по его индексу</li>
-            <li>долгое удаление и добавление значения, так как идет перерасчет (при удалении одного или нескольких значений
-                будет идти перерасчет всех индексов, чтобы они всё также были последовательны)
-            </li>
-        </ul>
+<p>Из ряда данного массива становится понятно, что:</p>
 
-        <p>Индекс — это лишь часть массива, но которая играет очень большую роль. Это можно понять на данном примере:</p>
-<pre>
- <code class="lang-text">индекс   |<span class="hljs-string"> 0 </span>|<span class="hljs-string"> 1</span>|<span
-class="hljs-string"> 2 </span>|<span class="hljs-string">   3  </span>|<span
-class="hljs-string">  4  </span>|<span class="hljs-string">  5  </span>|<span
-class="hljs-string">    6   </span>|<span class="hljs-string">    7   </span>|<span
-class="hljs-string">   8   </span>|<span class="hljs-string">   9   </span>|
-значение |<span class="hljs-string"> -5 </span>|<span class="hljs-string"> 5 </span>|<span
-class="hljs-string"> 0 </span>|<span class="hljs-string"> True </span>|<span
-class="hljs-string"> 5.5 </span>|<span class="hljs-string"> 555 </span>|<span
-class="hljs-string"> - 2.25 </span>|<span class="hljs-string"> 5 + 5j </span>|<span class="hljs-string"> 2.25  </span>|<span
-                    class="hljs-string"> False </span>|
-        </code>
-        </pre>
-        <p>При довольно запутанном внешнем виде ничего не перепутается. Так же можно массив положить в массив — это называется
-            многомерный массив, при этом свойства останутся неизменны.</p>
-        <p>Так же, помимо массивов очень популярна одна из его разновидностей — словарь.</p>
-        <blockquote>
-            <p>Словарь — это массив с именованными индексами.</p>
-        </blockquote>
-        <p>Здесь вместо чисел поставили строки. Из-за этого, словарь будет работать медленнее, но для человека куда понятнее.
-            Например:</p>
-        <pre>
-        <code class="lang-text">индекс   |<span class="hljs-string"> color </span>|<span class="hljs-string"> size  </span>|<span
-                class="hljs-string">    text     </span>|<span class="hljs-string">  font </span>|
-        значение |<span class="hljs-string"> aqua  </span>|<span class="hljs-string"> 50 px </span>|<span class="hljs-string"> Lorem ipsum </span>|<span
-                    class="hljs-string"> Arial </span>|
-        </code></pre>
-        <p>Благодаря гибкости словарей, данные структуры часто используются в настройках и при работе с базами данных.</p>
+<ul>
+	<li>индекс всегда начинается с нуля</li>
+	<li>индекс всегда идет по порядку</li>
+</ul>
+
+<p>Благодаря этому приобретаются следующие особенности:</p>
+
+<ul>
+	<li>можно легко и быстро найти необходимый элемент по его индексу</li>
+	<li>долгое удаление и добавление значения, так как идет перерасчет (при удалении одного или нескольких значений будет идти перерасчет всех индексов, чтобы они всё также были последовательны)</li>
+</ul>
+
+<p>Индекс — это лишь часть массива, но которая играет очень большую роль. Это можно понять на данном примере:</p>
+
+<pre><code class="lang-text">
+индекс   |<span class="hljs-string">  0 </span>|<span class="hljs-string"> 1 </span>|<span class="hljs-string"> 2 </span>|<span class="hljs-string">   3  </span>|<span class="hljs-string">  4  </span>|<span class="hljs-string">  5  </span>|<span class="hljs-string">    6   </span>|<span class="hljs-string">    7   </span>|<span class="hljs-string">   8   </span>|<span class="hljs-string">   9   </span>|
+значение |<span class="hljs-string"> -5 </span>|<span class="hljs-string"> 5 </span>|<span class="hljs-string"> 0 </span>|<span class="hljs-string"> True </span>|<span class="hljs-string"> 5.5 </span>|<span class="hljs-string"> 555 </span>|<span class="hljs-string"> - 2.25 </span>|<span class="hljs-string"> 5 + 5j </span>|<span class="hljs-string"> 2.25  </span>|<span class="hljs-string"> False </span>|
+</code></pre>
+
+<p>При довольно запутанном внешнем виде ничего не перепутается. Так же можно массив положить в массив — это называется многомерный массив, при этом свойства останутся неизменны.</p>
+
+<p>Так же, помимо массивов очень популярна одна из его разновидностей — словарь.</p>
+
+<blockquote>
+	<p>Словарь — это массив с именованными индексами.</p>
+</blockquote>
+
+<p>Здесь вместо чисел поставили строки. Из-за этого, словарь будет работать медленнее, но для человека куда понятнее. Например:</p>
+
+<pre><code class="lang-text">
+индекс   |<span class="hljs-string"> color </span>|<span class="hljs-string"> size  </span>|<span class="hljs-string">    text     </span>|<span class="hljs-string">  font </span>|
+значение |<span class="hljs-string"> aqua  </span>|<span class="hljs-string"> 50 px </span>|<span class="hljs-string"> Lorem ipsum </span>|<span class="hljs-string"> Arial </span>|
+</code></pre>
+
+<p>Благодаря гибкости словарей, данные структуры часто используются в настройках и при работе с базами данных.</p>
+	        </section>
+        </main>
+
+        <aside class="global__right-aside">
+
+        </aside>
+
+        <footer class="global__footer">
+			<p class="global__footer-info">Create by Zoya</p>
+	        <p class="global__footer-info">2021</p>
         </footer>
     </body>
 </html>
