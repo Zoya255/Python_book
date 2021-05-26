@@ -37,6 +37,7 @@
 
 	position: sticky;
 	top: 0;
+	z-index: 2;
 
 	background-color: #008B8B;
 }
@@ -101,7 +102,7 @@
 
 }
 
-/* -------------------- nav -------------------- */
+/* -------------------- menu -------------------- */
 
 .global__menu{
 	margin-top: 10px;
@@ -134,10 +135,48 @@
 
 /* -------------------- content -------------------- */
 
+.global__section-content h1{
+	font-size: 1.65em;
+
+	border-bottom: 3px solid #000000;
+}
+.global__section-content h2{
+	border-bottom: 1px solid #000000;
+}
+
 .global__section-content a{
 	text-decoration: none;
 
 	color: #0000FF;
+}
+
+.global__section-content blockquote{
+	margin-left: 25px;
+	padding: 3px 10px;
+
+	border-left: 5px solid #0000FF;
+}
+.global__section-content blockquote p{
+	margin: 0;
+}
+
+.global__section-content code{
+	padding: 3px;
+
+	border-radius: 3px;
+
+	color: #f8f8f2;
+	background-color: #272822;
+}
+.global__section-content pre{
+	padding: 5px 20px 1.5em;
+
+	line-height: 1.4em;
+	overflow-x: auto;
+
+	border-radius: 5px;
+
+	background-color: #272822;
 }
 
 /* -------------------- right aside -------------------- */

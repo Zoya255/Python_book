@@ -3,24 +3,43 @@
 /* -------------------- base -------------------- */
 
 .global__body{
-    background-color: #333333;
+	background-color: #333333;
 }
 
 .global__block{
-    background-color: #666666;
-    color: #eeeeee;
+	background-color: #666666;
+	color: #eeeeee;
 }
+
 /* -------------------- path -------------------- */
 
 .global__path-wrapper {
-    background-color: #333333;
+	background-color: #333333;
 }
 .global__path-link{
-    color: #87CEFA;
+	color: #87CEFA;
 }
 
 /* -------------------- content -------------------- */
 
+.global__section-content h1{
+	border-bottom: 3px solid #eeeeee;
+}
+.global__section-content h2{
+	border-bottom: 1px solid #eeeeee;
+}
+
 .global__section-content a{
 	color: #87CEFA;
+}
+
+.global__section-content blockquote{
+	margin-left: 25px;
+	padding: 3px 10px;
+
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+
+	border-left: 5px solid #87CEFA;
+	background-color: rgba(0, 0, 0, 0.3);
 }

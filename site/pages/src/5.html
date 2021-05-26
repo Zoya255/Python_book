@@ -8,9 +8,9 @@
 <p>Сильно упрощая, в общих чертах, Python - это такая же программа, как и любая другая. Следовательно, её установка на
 	вашу ОС. Инструкцию по установке можно найти на официальном сайте (<code>https://www.python.org/downloads/</code>),
 	так как все зависит от того на какую ОС вы будете устанавливать его.</p>
+
 <blockquote>
-	<p>Важно: Установить именно Python последней версии 3.Х (на данный момент последняя версия - 3.9). Python 2.X версии
-		— он уже давно устарел. </p>
+	<p>Важно: Установить именно Python последней версии 3.Х (на данный момент последняя версия - 3.9). Python 2.X версии — он уже давно устарел.</p>
 </blockquote>
 
 <h2>Комплектация</h2>
@@ -28,69 +28,73 @@
 <h2>Первая строка</h2>
 
 <p>Итак, для выполнения первой строчки достаточно лишь одной командной строки (терминала).</p>
-<p>Во время выполнения команды <code>python</code>. При условии, что установка прошла верно, то вы увидите что-то
-	подобное:</p>
 
-<pre><code class="lang-shell">$  python
-Python <span class="hljs-number">3.9</span><span class="hljs-meta">.1</span> (tags/v3<span
-			class="hljs-meta">.9</span><span class="hljs-meta">.1</span>:1e5d33e, <span class="hljs-keyword">Dec</span>  <span
-			class="hljs-number">7</span> <span class="hljs-number">2020</span>, <span
-			class="hljs-number">17</span>:<span class="hljs-number">08</span>:<span class="hljs-number">21</span>) [MSC v<span
-			class="hljs-meta">.1927</span> <span class="hljs-number">64</span> bit (AMD64)] on win32
-Type <span class="hljs-string">"help"</span>, <span class="hljs-string">"copyright"</span>, <span class="hljs-string">"credits"</span> <span
-			class="hljs-keyword">or</span> <span class="hljs-string">"license"</span> for more information.
-&gt;&gt;&gt;
+<p>Во время выполнения команды <code>python</code>. При условии, что установка прошла верно, то вы увидите что-то подобное:</p>
+
+<pre><code class="lang-shell">
+<span class="hljs-meta">$</span>  python
+Python 3.9.1 (tags/v3.9.1:1e5d33e, Dec 7 2020, 17:08:21) [MSC v.1927 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+<span class="hljs-meta">&gt;&gt;&gt;</span>
 </code></pre>
-<blockquote>
 
-	<p>Справка:
+<blockquote>
+	<p>
+		Справка:
+		<br>
 		<code>$</code> - приглашение командной строки системы
-		<code>&gt;&gt;&gt;</code> - приглашение командной строки Python</p>
+		<br>
+		<code>&gt;&gt;&gt;</code> - приглашение командной строки Python
+	</p>
 </blockquote>
 
-<p>Консоль Python запущена. Это окружение, которое позволяет выполнять код на Python на ходу. Теперь, мы можем написать
-	свою первую программу. Вот исходный код данной программы:</p>
+<p>Консоль Python запущена. Это окружение, которое позволяет выполнять код на Python на ходу. Теперь, мы можем написать свою первую программу. Вот исходный код данной программы:</p>
 
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-title">print</span><span
-		class="hljs-params">(<span class="hljs-string">"Hello World!"</span>)</span></span>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Hello World!"</span>)</span></span>
 </code></pre>
 
 <p>Как это выглядит в консоли:</p>
-<pre><code class="lang-shell"><span class="hljs-meta">&gt;&gt;</span>&gt; print(<span
-		class="hljs-string">"Hello World!"</span>)
+
+<pre><code class="lang-shell">
+<span class="hljs-meta">&gt;&gt;&gt;</span> <span class="hljs-keyword">print</span>(<span class="hljs-string">"Hello World!"</span>)
 Hello World!
 </code></pre>
 
 <p>По началу, это может показаться слишком просто, но это значительный плюс данного языка.</p>
+
 <p>Если вам хочется поэкспериментировать, попробуйте выполнить данный код. Так же можно изменять числовые параметры:</p>
 
-<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span
-		class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):
+<pre><code class="lang-python">
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):
     <span class="hljs-built_in">print</span>(<span class="hljs-number">5</span> ** i)
 </code></pre>
 
 <h2>Первый файл</h2>
 
-<p>Перед началом работы над собственными проектами рекомендуется создать папку для проектов, в ней папку в которой будет
-	находиться первый проект <code>Hello Wold.py</code>, где <code>.py</code> - расширение для файлов с кодом на python.
-</p>
+<p>Перед началом работы над собственными проектами рекомендуется создать папку для проектов, в ней папку в которой будет находиться первый проект <code>Hello Wold.py</code>, где <code>.py</code> - расширение для файлов с кодом на python.</p>
 
 <p>Путь к нашей папке будет выглядеть примерно так:</p>
 
-<pre><code>E:<span class="hljs-symbol">\P</span>ython<span class="hljs-symbol">\h</span>ello_world<span
-		class="hljs-symbol">\h</span>ello_world.py
-</code></pre><p>Далее запускаем сам проект. Так как мы пользуемся текстовым редактором, то просто открываем файл.</p>
+<pre><code>
+E:\Python\hello_world\hello_world.py
+</code></pre>
+
+<p>Далее запускаем сам проект. Так как мы пользуемся текстовым редактором, то просто открываем файл.</p>
 
 <p>После открытия текстового редактора пишем код:</p>
 
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-title">print</span><span
-		class="hljs-params">(<span class="hljs-string">"Hello World!"</span>)</span></span>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Hello World!"</span>)</span></span>
 </code></pre>
 
 <p>Теперь сохраняем и запускаем получившийся файл.</p>
-<p>В данном случае мы открываем терминал в данной папке и выполняем в нем команду <code>python</code>, а через пробел —
-	название файла которое необходимо запустить (<code>hello-world.py</code>). Вот, что должно получиться:</p>
-<pre><code class="lang-shell">$ python hello_world<span class="hljs-selector-class">.py</span>
+
+<p>В данном случае мы открываем терминал в данной папке и выполняем в нем команду <code>python</code>, а через пробел — название файла которое необходимо запустить (<code>hello-world.py</code>). Вот, что должно получиться:</p>
+
+<pre><code>
+<span class="hljs-meta">$</span> python hello_world.py
 Hello World!
 </code></pre>
+
 <p>При правильно написанном коде все получится с первого раза, вы молодцы!</p>
