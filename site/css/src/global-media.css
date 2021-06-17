@@ -10,7 +10,7 @@
 						     "l_aside main   r_aside"
 						     "footer  footer footer";
 		grid-template-rows: auto auto 1fr auto;
-		grid-template-columns: 1fr auto auto auto 1fr;
+		grid-template-columns: auto auto auto;
 	}
 
 }
@@ -37,7 +37,7 @@
 @media screen and (max-width: 1200px) {
 
 	.global__header-inner{
-		width: 100%;
+		width: calc(100% - 40px);
 
 		margin-left: 40px;
 	}

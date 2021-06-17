@@ -6,7 +6,17 @@
 	background-color: #333333;
 }
 
+/* -------------------- blocks -------------------- */
+
 .global__block{
+	background-color: #666666;
+	color: #eeeeee;
+}
+.global__terms{
+	background-color: #666666;
+	color: #eeeeee;
+}
+.global__term{
 	background-color: #666666;
 	color: #eeeeee;
 }

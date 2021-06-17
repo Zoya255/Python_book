@@ -21,6 +21,8 @@
 	background-color: #cccccc;
 }
 
+/* -------------------- blocks -------------------- */
+
 .global__block{
 	margin: 20px 20px 0 0;
 	padding: 10px 20px;
@@ -28,6 +30,27 @@
 	border-radius: 20px;
 
 	background-color: #eeeeee;
+}
+.global__terms{
+	margin: 20px 20px 0 0;
+	padding: 10px 20px;
+
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
+	background-color: #eeeeee;
+}
+.global__term{
+	margin: 10px 20px 0 0;
+	padding: 15px 20px;
+
+	border-radius: 0;
+
+	background-color: #eeeeee;
+}
+.global__term:last-child{
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 
 /* -------------------- header -------------------- */
@@ -139,6 +162,12 @@
 	margin-left: 40px;
 }
 
+.global__section-content img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
 .global__section-content h1{
 	font-size: 1.65em;
 
@@ -167,6 +196,8 @@
 .global__section-content code{
 	padding: 3px;
 
+	white-space: pre-line;
+
 	border-radius: 3px;
 
 	color: #f8f8f2;
@@ -181,6 +212,9 @@
 	border-radius: 5px;
 
 	background-color: #272822;
+}
+.global__section-content li{
+	padding-bottom: 4px;
 }
 
 /* -------------------- right aside -------------------- */
