@@ -1,3 +1,65 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Учебник по Python</title>
+
+		<link rel="stylesheet" href="../../css/src/global.css">
+		<link rel="stylesheet" href="../../css/src/global-dark.css">
+		<link rel="stylesheet" href="../../css/src/global-media.css">
+
+		<link rel="stylesheet" href="../../css/ext/monokai.css">
+	</head>
+
+	<body class="global__body">
+		<header class="global__header">
+			<div class="global__header-inner">
+				<span class="global__header-logo">
+					<a class="global__header-logo-link"
+					   href="../../index.html">
+						PyBook
+					</a>
+				</span>
+
+				<span class="global__header-links">
+					<a class="global__header-links-link" href="../../glossary.html">глоссарий</a>
+					<a class="global__header-links-link" href="../../about.html">о системе</a>
+				</span>
+			</div>
+		</header>
+
+		<div class="global__path-wrapper">
+			<div class="global__path global__block">
+				<a class="global__path-link" href="../../index.html">главная страница</a> / <a class="global__path-link" href="../section/section-2.html">раздел 2</a> / глава 8
+			</div>
+		</div>
+
+		<aside class="global__left-aside">
+			<nav class="global__menu global__block">
+				<h3 class="global__menu-title">Подпункты:</h3>
+
+				<ul class="global__menu-list">
+					<li class="global__menu-list-item">Синтаксис</li>
+					<li class="global__menu-list-item">Специальные возможности</li>
+					<ol>
+						<li class="global__menu-list-item">Список</li>
+						<li class="global__menu-list-item">Словари</li>
+						<li class="global__menu-list-item">Кортеж</li>
+						<li class="global__menu-list-item">Множества</li>
+					</ol>
+					<li class="global__menu-list-item">Вопросы для проверки</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main class="global__main">
+			<section class="global__section-content global__block">
+				<img src="../../img/src/title-8.png" alt="превью главы">
+			</section>
+			
+			<section class="global__section-content global__block">
 <h1>8. Синтаксис сложных переменных</h1>
 
 <h2>Синтаксис</h2>
@@ -19,14 +81,14 @@ two_dim_array = [ [<span class="hljs-number">1</span>, <span class="hljs-number"
 
 # многомерный массив (развернутый)
 test_array = [
-    [
-        <span class="hljs-string">"Что такое Python и с чем его едят?"</span>, 
-        <span class="hljs-number">1</span>,
-        [
-            'Язык программирования',
-            'Змея'
-        ]
-    ]
+	[
+		<span class="hljs-string">"Что такое Python и с чем его едят?"</span>, 
+		<span class="hljs-number">1</span>,
+		[
+			'Язык программирования',
+			'Змея'
+		]
+	]
 ]
 </code></pre>
 
@@ -63,7 +125,7 @@ arr = arr * <span class="hljs-number">2</span>  # [<span class="hljs-number">1</
 <h2>1. Список</h2>
 
 <blockquote>
-    <p>Список — упорядоченная изменяемая последовательность объектов в переменной <code>list</code>:</p>
+	<p>Список — упорядоченная изменяемая последовательность объектов в переменной <code>list</code>:</p>
 </blockquote>
 
 <h3>Синтаксис</h3>
@@ -91,23 +153,23 @@ number_list[ <span class="hljs-number">7</span> ] = <span class="hljs-number">80
 <p>Так же в список можно преобразовать и другие типы, как строка</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; list( <span class="hljs-string">"hello"</span> )
+<span class="hljs-meta">&gt;&gt;&gt;</span> list( <span class="hljs-string">"hello"</span> )
 [ <span class="hljs-string">'h'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'l'</span>, <span class="hljs-string">'l'</span>, <span class="hljs-string">'o'</span> ]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; list( ( <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span> ) )
+<span class="hljs-meta">&gt;&gt;&gt;</span> list( ( <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span> ) )
 [ <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span> ]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; list( { <span class="hljs-string">"b"</span>: <span class="hljs-string">"c"</span> } )
+<span class="hljs-meta">&gt;&gt;&gt;</span> list( { <span class="hljs-string">"b"</span>: <span class="hljs-string">"c"</span> } )
 [ <span class="hljs-string">'b'</span> ]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; list( { <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span> } )
+<span class="hljs-meta">&gt;&gt;&gt;</span> list( { <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span> } )
 [ <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span> ]
 </code></pre>
 
 <h2>2. Словари</h2>
 
 <blockquote>
-    <p>Словарь — упорядоченная изменяемая последовательность именованных элементов.</p>
+	<p>Словарь — упорядоченная изменяемая последовательность именованных элементов.</p>
 </blockquote>
 
 <p>Тип данной переменной записывается как - <code>dict</code>.</p>
@@ -134,20 +196,20 @@ conf_dict[ <span class="hljs-string">"size"</span> ]  = <span class="hljs-string
 <p>Словари можно получить и из других типов, но из-за их структуры это сделать немного сложнее. Главное, соблюсти основное условие — объект который вы хотите преобразовать должен сам быть типом массива как самому, так и каждому его элементу. Это нужно для получения названий и значений.</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; dict( [ [ <span class="hljs-number">5</span>, <span class="hljs-number">10</span> ], [ <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span> ], [ <span class="hljs-string">"c"</span>, False ] ] )
+<span class="hljs-meta">&gt;&gt;&gt;</span> dict( [ [ <span class="hljs-number">5</span>, <span class="hljs-number">10</span> ], [ <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span> ], [ <span class="hljs-string">"c"</span>, False ] ] )
 {<span class="hljs-number">5</span><span class="hljs-symbol">:</span><span class="hljs-number">10</span>, <span class="hljs-string">'a'</span>: <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>: False}
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; dict( ( ( <span class="hljs-string">"id"</span>, <span class="hljs-number">25</span> ), ( <span class="hljs-string">"name"</span>, <span class="hljs-string">"Zoya"</span> ) ) )
+<span class="hljs-meta">&gt;&gt;&gt;</span> dict( ( ( <span class="hljs-string">"id"</span>, <span class="hljs-number">25</span> ), ( <span class="hljs-string">"name"</span>, <span class="hljs-string">"Zoya"</span> ) ) )
 {<span class="hljs-string">'id'</span>: <span class="hljs-number">25</span>, <span class="hljs-string">'name'</span>: <span class="hljs-string">'Zoya'</span>}
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; dict( { ( <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ), ( <span class="hljs-number">3</span>, <span class="hljs-number">4</span> ), ( <span class="hljs-number">5</span>, <span class="hljs-number">6</span> ), ( <span class="hljs-number">7</span>, <span class="hljs-number">8</span> ), ( <span class="hljs-number">9</span>, <span class="hljs-number">0</span> ) } )
+<span class="hljs-meta">&gt;&gt;&gt;</span> dict( { ( <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ), ( <span class="hljs-number">3</span>, <span class="hljs-number">4</span> ), ( <span class="hljs-number">5</span>, <span class="hljs-number">6</span> ), ( <span class="hljs-number">7</span>, <span class="hljs-number">8</span> ), ( <span class="hljs-number">9</span>, <span class="hljs-number">0</span> ) } )
 {<span class="hljs-number">1</span>: <span class="hljs-number">2</span>, <span class="hljs-number">3</span>: <span class="hljs-number">4</span>, <span class="hljs-number">5</span>: <span class="hljs-number">6</span>, <span class="hljs-number">7</span>: <span class="hljs-number">8</span>, <span class="hljs-number">9</span>: <span class="hljs-number">0</span>}
 </code></pre>
 
 <h2>3. Кортеж</h2>
 
 <blockquote>
-    <p>Кортеж — упорядоченная постоянная (неизменяемая) последовательность элементов.</p>
+	<p>Кортеж — упорядоченная постоянная (неизменяемая) последовательность элементов.</p>
 </blockquote>
 
 <p>Тип данной переменной записывается как - <code>tuple</code>.</p>
@@ -170,12 +232,12 @@ conf_dict[ <span class="hljs-string">"size"</span> ]  = <span class="hljs-string
 <p>В кортеже нельзя изменять значения. При попытке изменить одно из значений, Python выдаст ошибку:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; row_tuple = ( <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span> )
+<span class="hljs-meta">&gt;&gt;&gt;</span> row_tuple = ( <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span> )
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; row_tuple[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> row_tuple[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>
 Traceback (most recent call last):
-  File <span class="hljs-string">"&lt;stdin&gt;"</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;<span class="hljs-class"><span class="hljs-keyword">module</span>&gt;</span>
-<span class="hljs-symbol">TypeError:</span> <span class="hljs-string">'tuple'</span> object does <span class="hljs-keyword">not</span> support item assignment
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: 'tuple' object does not support item assignment
 </code></pre>
 
 <p>В данной ошибке говориться, что &quot;объект типа &#39;кортеж&#39; не может быть изменен&quot;</p>
@@ -183,12 +245,12 @@ Traceback (most recent call last):
 <p>Из чего следует вывод, что сам кортеж нельзя поменять, а можно лишь пересоздать. Так же нельзя убирать или добавлять элементы. Но можно сложить основной кортеж с кортежем, который необходимо добавить.</p>
 
 <pre><code class="lang-shell">
-&gt;&gt;&gt; main_tuple = ( <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">20</span>, <span class="hljs-number">25</span>, <span class="hljs-number">30</span> )
-&gt;&gt;&gt; add_tuple  = ( <span class="hljs-number">35</span>, <span class="hljs-number">40</span>, <span class="hljs-number">45</span>, <span class="hljs-number">50</span> )
+<span class="hljs-meta">&gt;&gt;&gt;</span> main_tuple = ( <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">20</span>, <span class="hljs-number">25</span>, <span class="hljs-number">30</span> )
+<span class="hljs-meta">&gt;&gt;&gt;</span> add_tuple  = ( <span class="hljs-number">35</span>, <span class="hljs-number">40</span>, <span class="hljs-number">45</span>, <span class="hljs-number">50</span> )
 
-&gt;&gt;&gt; main_tuple = main_tuple + add_tuple
+<span class="hljs-meta">&gt;&gt;&gt;</span> main_tuple = main_tuple + add_tuple
 
-&gt;&gt;&gt; main_tuple
+<span class="hljs-meta">&gt;&gt;&gt;</span> main_tuple
 ( <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">20</span>, <span class="hljs-number">25</span>, <span class="hljs-number">30</span>, <span class="hljs-number">35</span>, <span class="hljs-number">40</span>, <span class="hljs-number">45</span>, <span class="hljs-number">50</span> )
 </code></pre>
 
@@ -197,16 +259,16 @@ Traceback (most recent call last):
 <p>В кортеж можно преобразовать всё то же самое, что и в список, из-за его схожести со списком.</p>
 
 <pre><code class="lang-shell">
-&gt;&gt;&gt; tuple( <span class="hljs-string">"you cool"</span> )
+<span class="hljs-meta">&gt;&gt;&gt;</span> tuple( <span class="hljs-string">"you cool"</span> )
 ( 'y', 'o', 'u', ' ', 'c', 'o', 'o', 'l' )
 
-&gt;&gt;&gt; tuple( [ <span class="hljs-string">"x"</span>, <span class="hljs-string">"y"</span>, <span class="hljs-string">"z"</span> ] )
+<span class="hljs-meta">&gt;&gt;&gt;</span> tuple( [ <span class="hljs-string">"x"</span>, <span class="hljs-string">"y"</span>, <span class="hljs-string">"z"</span> ] )
 ( 'x', 'y', 'z' )
 
-&gt;&gt;&gt; tuple( { <span class="hljs-string">"red"</span>: <span class="hljs-number">25</span>, <span class="hljs-string">"orange"</span>: <span class="hljs-number">25</span>, <span class="hljs-string">"yellow"</span>: <span class="hljs-number">25</span>, <span class="hljs-string">"green"</span>: <span class="hljs-number">25</span>, blue<span class="hljs-string">": 25, "</span>darkblue<span class="hljs-string">": 25. purple"</span>: <span class="hljs-number">25</span> } )
+<span class="hljs-meta">&gt;&gt;&gt;</span> tuple( { <span class="hljs-string">"red"</span>: <span class="hljs-number">25</span>, <span class="hljs-string">"orange"</span>: <span class="hljs-number">25</span>, <span class="hljs-string">"yellow"</span>: <span class="hljs-number">25</span>, <span class="hljs-string">"green"</span>: <span class="hljs-number">25</span>, blue<span class="hljs-string">": 25, "</span>darkblue<span class="hljs-string">": 25. purple"</span>: <span class="hljs-number">25</span> } )
 ( 'red', 'orange', 'yellow', 'green', 'blue', 'darkblue', purple' )
 
-&gt;&gt;&gt; tuple( { <span class="hljs-string">"delta"</span>, <span class="hljs-string">"epsilon"</span>, <span class="hljs-string">"alpha"</span> } )
+<span class="hljs-meta">&gt;&gt;&gt;</span> tuple( { <span class="hljs-string">"delta"</span>, <span class="hljs-string">"epsilon"</span>, <span class="hljs-string">"alpha"</span> } )
 ( 'delta', 'epsilon', 'alpha' )
 </code></pre>
 
@@ -219,7 +281,7 @@ Traceback (most recent call last):
 <p>Так же у множеств полностью отсутствует индексация. То есть нельзя обратиться к какому-то конкретному значению.</p>
 
 <blockquote>
-    <p>Множество — неупорядоченный неизменяемый набор уникальных элементов.</p>
+	<p>Множество — неупорядоченный неизменяемый набор уникальных элементов.</p>
 </blockquote>
 
 <p>Тип данной переменной записывается как - <code>set</code>.</p>
@@ -231,9 +293,9 @@ match_set = { <span class="hljs-number">5</span>, <span class="hljs-number">10</
 </code></pre>
 
 <blockquote>
-    <p>Нельзя создать пустое множество с помощью данной записи, данный объект не будет словарем.</p>
+	<p>Нельзя создать пустое множество с помощью данной записи, данный объект не будет словарем.</p>
 
-    <p>Работа со словарем происходит не напрямую, а обобщенно, через методы.</p>
+	<p>Работа со словарем происходит не напрямую, а обобщенно, через методы.</p>
 </blockquote>
 
 <h3>Преобразование</h3>
@@ -241,15 +303,59 @@ match_set = { <span class="hljs-number">5</span>, <span class="hljs-number">10</
 <p>В множество можно преобразовать как строку так и другие типы массивов, при этом повторения буду удалены.</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; set( <span class="hljs-string">"very very long snake"</span> )
+<span class="hljs-meta">&gt;&gt;&gt;</span> set( <span class="hljs-string">"very very long snake"</span> )
 {<span class="hljs-string">'l'</span>, <span class="hljs-string">'o'</span>, <span class="hljs-string">'g'</span>, <span class="hljs-string">'s'</span>, <span class="hljs-string">'a'</span>, <span class="hljs-string">'k'</span>}
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; set( [ <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"s"</span> ] )
+<span class="hljs-meta">&gt;&gt;&gt;</span> set( [ <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"s"</span> ] )
 {<span class="hljs-string">'c'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">'s'</span>}
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; set( ( <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span> ) )
+<span class="hljs-meta">&gt;&gt;&gt;</span> set( ( <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span> ) )
 {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>}
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; set( { <span class="hljs-string">"d"</span>: <span class="hljs-string">"e"</span>, <span class="hljs-string">"e"</span>: <span class="hljs-string">"f"</span>, <span class="hljs-string">"f"</span>: <span class="hljs-string">"g"</span> } )
+<span class="hljs-meta">&gt;&gt;&gt;</span> set( { <span class="hljs-string">"d"</span>: <span class="hljs-string">"e"</span>, <span class="hljs-string">"e"</span>: <span class="hljs-string">"f"</span>, <span class="hljs-string">"f"</span>: <span class="hljs-string">"g"</span> } )
 {<span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'f'</span>}
 </code></pre>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Вопросы для проверки</h2>
+				
+				<ol>
+					<li>Дайте определение термину &quot;список&quot;.</li>
+					<li>Какой вид записи используется для создания массива?</li>
+					<li>Как происходит обращение к элементу массива?</li>
+					<li>Какие действия можно проивзодить над массивами?</li>
+					<li>Дайте определение термину &quot;список&quot;.</li>
+					<li>Какие действия можно производить со списком?</li>
+					<li>Как записывается тип переменной &quot;словарь&quot;?</li>
+					<li>Какие действия можно производить со словарём?</li>
+					<li>Дайте определение термину &quot;кортеж&quot;.</li>
+					<li>Какие действия можно производить над кортежем?</li>
+					<li>Какая отличительная особенность кортежа?</li>
+					<li>Дайте определение термину &quot;множество&quot;.</li>
+					<li>Какие отличительные особенности у множества?</li>
+				</ol>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Практические задания</h2>
+
+				<ol>
+					<li>Создать памятку по сложным типам переменных</li>
+					<li>Потренироваться в написании разных типов массивов</li>
+					<li>Поэксперементировать и понять на практике различия разных типов массивов</li>
+					<li>Проверить различные пребразования массивов</li>
+				</ol>
+			</section>
+		</main>
+
+		<aside class="global__right-aside">
+
+		</aside>
+
+		<footer class="global__footer">
+			<p class="global__footer-info">Create by Zoya</p>
+			<p class="global__footer-info">2021</p>
+		</footer>
+	</body>
+</html>

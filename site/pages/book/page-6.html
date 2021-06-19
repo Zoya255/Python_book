@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Учебник по Python</title>
+		<title>Учебник по Python</title>
 
-        <link rel="stylesheet" href="../../css/src/global.css">
-	    <link rel="stylesheet" href="../../css/src/global-dark.css">
-        <link rel="stylesheet" href="../../css/src/global-media.css">
+		<link rel="stylesheet" href="../../css/src/global.css">
+		<link rel="stylesheet" href="../../css/src/global-dark.css">
+		<link rel="stylesheet" href="../../css/src/global-media.css">
 
-        <link rel="stylesheet" href="../../css/ext/monokai.css">
-    </head>
+		<link rel="stylesheet" href="../../css/ext/monokai.css">
+	</head>
 
-    <body class="global__body">
-        <header class="global__header">
+	<body class="global__body">
+		<header class="global__header">
 			<div class="global__header-inner">
 				<span class="global__header-logo">
 					<a class="global__header-logo-link"
@@ -24,16 +24,17 @@
 				</span>
 
 				<span class="global__header-links">
-		            <a class="global__header-links-link" href="../../glossary.html">глоссарий</a>
-	            </span>
+					<a class="global__header-links-link" href="../../glossary.html">глоссарий</a>
+					<a class="global__header-links-link" href="../../about.html">о системе</a>
+				</span>
 			</div>
 		</header>
 
-        <div class="global__path-wrapper">
-	        <div class="global__path global__block">
+		<div class="global__path-wrapper">
+			<div class="global__path global__block">
 				<a class="global__path-link" href="../../index.html">главная страница</a> / <a class="global__path-link" href="../section/section-2.html">раздел 2</a> / глава 6
-	        </div>
-        </div>
+			</div>
+		</div>
 
 		<aside class="global__left-aside">
 			<nav class="global__menu global__block">
@@ -44,18 +45,22 @@
 					<li class="global__menu-list-item">Простые переменные</li>
 					<li class="global__menu-list-item">Числовые</li>
 					<li class="global__menu-list-item">Целочисленные</li>
-                    <li class="global__menu-list-item">Вещественные</li>
-                    <li class="global__menu-list-item">Комплексные</li>
-                    <li class="global__menu-list-item">Строковые</li>
-                    <li class="global__menu-list-item">Логические</li>
-                    <li class="global__menu-list-item">Типизация</li>
+					<li class="global__menu-list-item">Вещественные</li>
+					<li class="global__menu-list-item">Комплексные</li>
+					<li class="global__menu-list-item">Строковые</li>
+					<li class="global__menu-list-item">Логические</li>
+					<li class="global__menu-list-item">Типизация</li>
 					<li class="global__menu-list-item">Вопросы для проверки</li>
 				</ul>
 			</nav>
 		</aside>
 
-        <main class="global__main">
-	        <section class="global__section-content global__block">
+		<main class="global__main">
+			 <section class="global__section-content global__block">
+				<img src="../../img/src/title-6.png" alt="превью главы">
+			</section>
+			
+			<section class="global__section-content global__block">
 <h1>6. Начнем с простого...</h1>
 
 <p>Синтаксис — это определенная система правил написания кода.</p>
@@ -63,10 +68,10 @@
 <p>Существует несколько определённых правил написания кода:</p>
 
 <ul>
-    <li>каждое новое действие начинается с новой строки</li>
-    <li>уровни кода отделяются друг от друга табуляцией</li>
-    <li>табуляцию и пробелы смешивать нельзя</li>
-    <li>операторы могут отделяться друг от друга одной или несколькими пустыми строками</li>
+	<li>каждое новое действие начинается с новой строки</li>
+	<li>уровни кода отделяются друг от друга табуляцией</li>
+	<li>табуляцию и пробелы смешивать нельзя</li>
+	<li>операторы могут отделяться друг от друга одной или несколькими пустыми строками</li>
 </ul>
 
 <p>Это общие правила и принципы написания кода. Более подробно ознакомиться с правилами написания кода можно при помощи соглашения PEP8. Это необходимо, чтобы не было путаницы в написании кода, а был единый стиль написания.</p>
@@ -139,9 +144,9 @@
 <p>Так же у вещественных чисел есть отличительные особенности:</p>
 
 <ul>
-    <li>определённый размер (не могут быть сколь угодно большими)</li>
-    <li>неточность округления</li>
-    <li>отображение вещественных чисел со степенями</li>
+	<li>определённый размер (не могут быть сколь угодно большими)</li>
+	<li>неточность округления</li>
+	<li>отображение вещественных чисел со степенями</li>
 </ul>
 
 <h3>Комплексные</h3>
@@ -188,15 +193,15 @@
 <p>Динамическая типизация необходима для правильного отображения переменных. Рассмотрим следующие виды &quot;оберток&quot;:</p>
 
 <ul>
-    <li>если объект находится в одинарных или двойных кавычках, например: <code>&#39;abc abc&#39;</code> <code>&quot;abc abc&quot;</code> - это строка даже если внутри кавычек числа
-    </li>
+	<li>если объект находится в одинарных или двойных кавычках, например: <code>&#39;abc abc&#39;</code> <code>&quot;abc abc&quot;</code> - это строка даже если внутри кавычек числа
+	</li>
 </ul>
 
 <p>объект может быть без кавычек только в двух случаях:</p>
 
 <ul>
-    <li>если это цифры, например: <code>5</code>, <code>2.25</code> или <code>2 + 2j</code></li>
-    <li>или если это логически типизированное значение, например: <code>True</code> или <code>False</code></li>
+	<li>если это цифры, например: <code>5</code>, <code>2.25</code> или <code>2 + 2j</code></li>
+	<li>или если это логически типизированное значение, например: <code>True</code> или <code>False</code></li>
 </ul>
 
 <h3>Динамически строгая</h3>
@@ -205,9 +210,9 @@
 <p>Это необходимо для:</p>
 
 <ul>
-    <li>исключения необходимости постоянного вычисления переменной</li>
-    <li>для исключения смены типа переменной</li>
-    <li>исключения беспричинной смены типа переменной</li>
+	<li>исключения необходимости постоянного вычисления переменной</li>
+	<li>для исключения смены типа переменной</li>
+	<li>исключения беспричинной смены типа переменной</li>
 </ul>
 
 <h3>Неявные</h3>
@@ -228,7 +233,7 @@
 <p>Ответ: <code>float</code>, не зависимо от того, что производились взаимодействия двух разных типов. Сейчас произошло неявное преобразование. По другому говоря изменение &quot;на лету&quot;.</p>
 
 <p>Например, <code>float</code> + <code>int</code> дают всегда <code>float</code>, даже если было преобразование в
-    <code>int</code>.</p>
+	<code>int</code>.</p>
 
 <p>Данные преобразования логичны и необходимы для выполнения различных операций без потерь. </p>
 
@@ -259,9 +264,9 @@ to_int2 = <span class="hljs-built_in">int</span>(<span class="hljs-string">'5'</
 <p>Тип <code>float</code> можно преобразовать из <code>int</code> или <code>str</code>:</p>
 
 <pre><code class="lang-python">
-to_float1 = <span class="hljs-built_in">float</span>(<span class="hljs-number">5</span>)      # <span class="hljs-number">5.0</span>
-to_float2 = <span class="hljs-built_in">float</span>('<span class="hljs-number">5</span>')    # <span class="hljs-number">5.0</span>
-to_float3 = <span class="hljs-built_in">float</span>('<span class="hljs-number">5.0</span>')  # <span class="hljs-number">5.0</span>
+to_float1 = <span class="hljs-built_in">float</span>(<span class="hljs-number">5</span>)      <span class="hljs-meta"># 5.0</span>
+to_float2 = <span class="hljs-built_in">float</span>('<span class="hljs-number">5</span>')    <span class="hljs-meta"># 5.0</span>
+to_float3 = <span class="hljs-built_in">float</span>('<span class="hljs-number">5.0</span>')  <span class="hljs-meta"># 5.0</span>
 </code></pre>
 
 <h4>3. complex</h4>
@@ -269,14 +274,14 @@ to_float3 = <span class="hljs-built_in">float</span>('<span class="hljs-number">
 <p>Тип <code>complex</code> можно преобразовать из <code>int</code>, <code>float</code>, <code>str</code> или их смеси:</p>
 
 <pre><code class="lang-python">
-to_complex1 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">5</span>)               # <span class="hljs-number">5</span>+<span class="hljs-number">0</span>j
-to_complex2 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>)           # <span class="hljs-number">5</span>+<span class="hljs-number">10</span>j
-to_complex3 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">2.25</span>)            # <span class="hljs-number">2.25</span>+<span class="hljs-number">0</span>j
-to_complex4 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">2.25</span>, <span class="hljs-number">5</span>)         # <span class="hljs-number">2.25</span>+<span class="hljs-number">5</span>j
-to_complex5 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">5</span>')             # <span class="hljs-number">5</span>+<span class="hljs-number">0</span>j
-to_complex6 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">5</span>', '<span class="hljs-number">10</span>')       # <span class="hljs-number">5</span>+<span class="hljs-number">10</span>j
-to_complex7 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">2.25</span>')          # <span class="hljs-number">2.25</span>+<span class="hljs-number">0</span>j
-to_complex8 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">2.25</span>', '<span class="hljs-number">3.25</span>')  # <span class="hljs-number">2.25</span>+<span class="hljs-number">3.25</span>j
+to_complex1 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">5</span>)               <span class="hljs-meta"># 5+0j</span>
+to_complex2 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>)           <span class="hljs-meta"># 5+10j</span>
+to_complex3 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">2.25</span>)            <span class="hljs-meta"># 2.25+0j</span>
+to_complex4 = <span class="hljs-built_in">complex</span>(<span class="hljs-number">2.25</span>, <span class="hljs-number">5</span>)         <span class="hljs-meta"># 2.25+5j</span>
+to_complex5 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">5</span>')             <span class="hljs-meta"># 5+0j</span>
+to_complex6 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">5</span>', '<span class="hljs-number">10</span>')       <span class="hljs-meta"># 5+10j</span>
+to_complex7 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">2.25</span>')          <span class="hljs-meta"># 2.25+0j</span>
+to_complex8 = <span class="hljs-built_in">complex</span>('<span class="hljs-number">2.25</span>', '<span class="hljs-number">3.25</span>')  <span class="hljs-meta"># 2.25+3.25j</span>
 </code></pre>
 
 <h4>4. str</h4>
@@ -284,12 +289,12 @@ to_complex8 = <span class="hljs-built_in">complex</span>('<span class="hljs-numb
 <p>В тип <code>str</code> может преобразовать любой другой тип:</p>
 
 <pre><code class="lang-python">
-<span class="hljs-attr">to_str1</span> = <span class="hljs-built_in">str</span>(<span class="hljs-number">5</span>)          # <span class="hljs-string">'5'</span>
-<span class="hljs-attr">to_str2</span> = <span class="hljs-built_in">str</span>(<span class="hljs-number">5.0</span>)        # <span class="hljs-string">'5.0'</span>
-<span class="hljs-attr">to_str3</span> = <span class="hljs-built_in">str</span>(<span class="hljs-number">5</span>+<span class="hljs-number">5</span>j)       # <span class="hljs-string">'(5+5j)'</span>
-<span class="hljs-attr">to_str4</span> = <span class="hljs-built_in">str</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])  # <span class="hljs-string">'([1, 2, 3])'</span>
-<span class="hljs-attr">to_str5</span> = <span class="hljs-built_in">str</span>(<span class="hljs-literal">False</span>)      # <span class="hljs-string">'False'</span>
-<span class="hljs-attr">to_str6</span> = <span class="hljs-built_in">str</span>(<span class="hljs-string">'abc'</span>)      # <span class="hljs-string">'abc'</span>
+<span class="hljs-attr">to_str1</span> = <span class="hljs-built_in">str</span>(<span class="hljs-number">5</span>)          <span class="hljs-meta"># '5'</span>
+<span class="hljs-attr">to_str2</span> = <span class="hljs-built_in">str</span>(<span class="hljs-number">5.0</span>)        <span class="hljs-meta"># '5.0'</span>
+<span class="hljs-attr">to_str3</span> = <span class="hljs-built_in">str</span>(<span class="hljs-number">5</span>+<span class="hljs-number">5</span>j)       <span class="hljs-meta"># '(5+5j)'</span>
+<span class="hljs-attr">to_str4</span> = <span class="hljs-built_in">str</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])  <span class="hljs-meta"># '([1, 2, 3])'</span>
+<span class="hljs-attr">to_str5</span> = <span class="hljs-built_in">str</span>(<span class="hljs-literal">False</span>)      <span class="hljs-meta"># 'False'</span>
+<span class="hljs-attr">to_str6</span> = <span class="hljs-built_in">str</span>(<span class="hljs-string">'abc'</span>)      <span class="hljs-meta"># 'abc'</span>
 </code></pre>
 
 <h4>5. bool</h4>
@@ -297,30 +302,53 @@ to_complex8 = <span class="hljs-built_in">complex</span>('<span class="hljs-numb
 <p>В тип <code>bool</code> можно преобразовать любой другой тип:</p>
 
 <pre><code class="lang-python">
-<span class="hljs-attr">to_bool</span>   = <span class="hljs-built_in">bool</span>()           # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool1</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">1</span>)          # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool2</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">0</span>)          # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool3</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">1.0</span>)        # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool4</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">0.0</span>)        # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool5</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">1</span>+<span class="hljs-number">1</span>j)       # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool6</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">0</span>+<span class="hljs-number">0</span>j)       # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool7</span>  = <span class="hljs-built_in">bool</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])  # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool8</span>  = <span class="hljs-built_in">bool</span>([])         # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool9</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-literal">True</span>)       # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool10</span> = <span class="hljs-built_in">bool</span>(<span class="hljs-literal">False</span>)      # <span class="hljs-literal">False</span>
-<span class="hljs-attr">to_bool11</span> = <span class="hljs-built_in">bool</span>(<span class="hljs-string">'abc'</span>)      # <span class="hljs-literal">True</span>
-<span class="hljs-attr">to_bool12</span> = <span class="hljs-built_in">bool</span>(<span class="hljs-string">''</span>)         # <span class="hljs-literal">False</span>
+<span class="hljs-attr">to_bool</span>   = <span class="hljs-built_in">bool</span>()           <span class="hljs-meta"># False</span>
+<span class="hljs-attr">to_bool1</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">1</span>)          <span class="hljs-meta"># True</span>
+<span class="hljs-attr">to_bool2</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">0</span>)          <span class="hljs-meta"># False</span>
+<span class="hljs-attr">to_bool3</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">1.0</span>)        <span class="hljs-meta"># True</span>
+<span class="hljs-attr">to_bool4</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">0.0</span>)        <span class="hljs-meta"># False</span>
+<span class="hljs-attr">to_bool5</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">1</span>+<span class="hljs-number">1</span>j)       <span class="hljs-meta"># True</span>
+<span class="hljs-attr">to_bool6</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-number">0</span>+<span class="hljs-number">0</span>j)       <span class="hljs-meta"># False</span>
+<span class="hljs-attr">to_bool7</span>  = <span class="hljs-built_in">bool</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])  <span class="hljs-meta"># True</span>
+<span class="hljs-attr">to_bool8</span>  = <span class="hljs-built_in">bool</span>([])         <span class="hljs-meta"># False</span>
+<span class="hljs-attr">to_bool9</span>  = <span class="hljs-built_in">bool</span>(<span class="hljs-literal">True</span>)       <span class="hljs-meta"># True</span>
+<span class="hljs-attr">to_bool10</span> = <span class="hljs-built_in">bool</span>(<span class="hljs-literal">False</span>)      <span class="hljs-meta"># False</span>
+<span class="hljs-attr">to_bool11</span> = <span class="hljs-built_in">bool</span>(<span class="hljs-string">'abc'</span>)      <span class="hljs-meta"># True</span>
+<span class="hljs-attr">to_bool12</span> = <span class="hljs-built_in">bool</span>(<span class="hljs-string">''</span>)         <span class="hljs-meta"># False</span>
 </code></pre>
-	        </section>
-        </main>
+			</section>
 
-        <aside class="global__right-aside">
+			<section class="global__section-content global__block">
+				<h2>Вопросы для проверки</h2>
 
-        </aside>
+				<ol>
+					<li>Что такое синтаксис?</li>
+					<li>Что такое переменная и как она пишется - с одним и несколькими значениями?</li>
+					<li>Какие типы переменных есть в Python?</li>
+					<li>Какие числовые переменные имеются в Python?</li>
+					<li>Какая типизация представлена в Python?</li>
+					<li>Какие явные преобразования имеются на Python?</li>
+				</ol>
+			</section>
 
-        <footer class="global__footer">
+			<section class="global__section-content global__block">
+				<h2>Практические задания</h2>
+
+				<ol>
+					<li>Создать себе памятку по типам простых переменных</li>
+					<li>Потренироваться в написании переменных и присвоении им значений</li>
+					<li>Поэкспеременитировать с преобразованиями переменных</li>
+				</ol>
+			</section>
+		</main>
+
+		<aside class="global__right-aside">
+
+		</aside>
+
+		<footer class="global__footer">
 			<p class="global__footer-info">Create by Zoya</p>
-	        <p class="global__footer-info">2021</p>
-        </footer>
-    </body>
+			<p class="global__footer-info">2021</p>
+		</footer>
+	</body>
 </html>

@@ -83,6 +83,8 @@
 
 }
 .global__header-links-link{
+	padding-right: 15px;
+
 	text-decoration: none;
 
 	color: #eeeeee;
@@ -137,7 +139,7 @@
 	padding-left: 20px;
 }
 .global__menu-list-item{
-
+	padding-bottom: 1px;
 }
 
 /* -------------------- main -------------------- */
@@ -196,7 +198,7 @@
 .global__section-content code{
 	padding: 3px;
 
-	white-space: pre-line;
+	white-space: pre-wrap;
 
 	border-radius: 3px;
 

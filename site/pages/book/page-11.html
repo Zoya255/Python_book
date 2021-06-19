@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Учебник по Python</title>
+
+		<link rel="stylesheet" href="../../css/src/global.css">
+		<link rel="stylesheet" href="../../css/src/global-dark.css">
+		<link rel="stylesheet" href="../../css/src/global-media.css">
+
+		<link rel="stylesheet" href="../../css/ext/monokai.css">
+	</head>
+
+	<body class="global__body">
+		<header class="global__header">
+			<div class="global__header-inner">
+				<span class="global__header-logo">
+					<a class="global__header-logo-link"
+					   href="../../index.html">
+						PyBook
+					</a>
+				</span>
+
+				<span class="global__header-links">
+					<a class="global__header-links-link" href="../../glossary.html">глоссарий</a>
+					<a class="global__header-links-link" href="../../about.html">о системе</a>
+				</span>
+			</div>
+		</header>
+
+		<div class="global__path-wrapper">
+			<div class="global__path global__block">
+				<a class="global__path-link" href="../../index.html">главная страница</a> / <a class="global__path-link" href="../section/section-3.html">раздел 3</a> / глава 11
+			</div>
+		</div>
+
+		<aside class="global__left-aside">
+			<nav class="global__menu global__block">
+				<h3 class="global__menu-title">Подпункты:</h3>
+
+				<ul class="global__menu-list">
+					<li class="global__menu-list-item">Алгоритмические основы ветвления</li>
+					<li class="global__menu-list-item">Вопросы для проверки</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main class="global__main">
+			<section class="global__section-content global__block">
+				<img src="../../img/src/title-11.png" alt="превью главы">
+			</section>
+			
+			<section class="global__section-content global__block">
+<h1>11. Алгоритмические основы ветвления</h1>
+
+<h2>Три главных оператора:</h2>
+
+<h3>Оператор <code>if</code> ( если )</h3>
+
+<blockquote>
+	<p>Оператор if - оператор ветвления, который срабатывает только <strong>если</strong> его условие верно </p>
+</blockquote>
+
+<p>Разберём на примере:</p>
+
+<pre><code class="lang-text">
+если <span class="hljs-selector-tag">i</span> &lt; <span class="hljs-number">10</span>:
+	тело_ветви
+
+<span class="hljs-selector-tag">i</span> &lt; <span class="hljs-number">10</span> - условие срабатывания данной ветви ( может быть любым )
+тело ветви - код, который выполнится, если условие верно
+</code></pre>
+
+<p>Такой оператор работает просто — при его срабатывании, он сверяет условие, и если оно возвращает True ( т.е. верно ) - выполняет код внутри оператора. Иначе — не делает ничего. Почти таким же образом работают и циклы.</p>
+
+<p>Понятное дело, условие должно поддерживаться, чтобы можно было сказать, верно или нет. Например:</p>
+
+<pre><code class="lang-text"><span class="hljs-selector-tag">i</span> = -<span class="hljs-number">1</span>
+
+если <span class="hljs-selector-tag">i</span> &lt; <span class="hljs-number">0</span>:
+	этот код выполнится
+
+если <span class="hljs-selector-tag">i</span> &gt; <span class="hljs-number">0</span>:
+	этот код будет пропущен
+</code></pre>
+
+<h3>Оператор <code>else</code> ( иначе )</h3>
+
+<p>Может казаться, что возможностей обычного <code>if</code> уже достаточно, но это не совсем так. Часто встречается такая ситуация, когда надо что-то сделать, если условие неверно.</p>
+
+<blockquote>
+	<p>Оператор else - оператор ветвления, который следует сразу за if и выполняется, если основное условие неверно</p>
+</blockquote>
+
+<p>Условно, это выглядит следующим образом:</p>
+
+<pre><code class="lang-text">
+<span class="hljs-keyword">если</span> условие:
+	основной код, <span class="hljs-keyword">если</span> условие верно
+<span class="hljs-keyword">иначе</span>:
+	запасной код, <span class="hljs-keyword">если</span> условие ложно
+</code></pre>
+
+<p>Например:</p>
+
+<pre><code class="lang-text">
+<span class="hljs-selector-tag">i</span> = <span class="hljs-number">10</span>
+
+если <span class="hljs-selector-tag">i</span> == <span class="hljs-number">5</span>:
+	этот код не выполнится
+иначе:
+	этот код выполнится
+</code></pre>
+
+<h3>Оператор <code>else if</code> ( иначе если )</h3>
+
+<p>Однако помимо вышеперечисленных, есть ещё один оператор — иначе с условием. Т.е. это оператор с альтернативным вариантом условия.</p>
+
+<blockquote>
+	<p>Оператор else if - оператор ветвления, который вставляется между if и else и выполняется если основное условие неверно, а дополнительное — верно</p>
+</blockquote>
+
+<p>Это выглядит примерно вот так:</p>
+
+<pre><code class="lang-text">
+<span class="hljs-keyword">если</span> условие:
+	основной код, <span class="hljs-keyword">если</span> основное условие верно
+<span class="hljs-keyword">иначе</span> <span class="hljs-keyword">если</span> альтернативное условие:
+	запасной код, <span class="hljs-keyword">если</span> основное условие ложно, а альтернативное - верно
+<span class="hljs-keyword">иначе</span>:
+	запасной код, <span class="hljs-keyword">если</span> все условия ложны
+</code></pre>
+
+<p>Например:</p>
+
+<pre><code class="lang-text">
+i = <span class="hljs-number">400</span>
+
+<span class="hljs-keyword">если</span> i &lt; <span class="hljs-number">100</span>:
+	этот код <span class="hljs-keyword">не</span> выполнится
+<span class="hljs-keyword">иначе</span> <span class="hljs-keyword">если</span> i &gt; <span class="hljs-number">100</span>:
+	этот код выполнится
+<span class="hljs-keyword">иначе</span>:
+	этот код <span class="hljs-keyword">не</span> выполнится
+</code></pre>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Вопросы для проверки</h2>
+
+				<ol>
+					<li>Что такое оператор ветвления?</li>
+					<li>Зачем нужен оператор ветвления?</li>
+					<li>Какая, по вашему мнению, сфера применения операторов ветвления?</li>
+					<li>Как работает оператор <code>if</code>?</li>
+					<li>Как работает оператор <code>else</code>?</li>
+					<li>Как работает оператор <code>else if</code>?</li>
+				</ol>
+			</section>
+		</main>
+
+		<aside class="global__right-aside">
+
+		</aside>
+
+		<footer class="global__footer">
+			<p class="global__footer-info">Create by Zoya</p>
+			<p class="global__footer-info">2021</p>
+		</footer>
+	</body>
+</html>

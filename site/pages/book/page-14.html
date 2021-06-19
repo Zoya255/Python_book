@@ -1,4 +1,62 @@
-<h1>14.Циклы в Python</h1>
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Учебник по Python</title>
+
+		<link rel="stylesheet" href="../../css/src/global.css">
+		<link rel="stylesheet" href="../../css/src/global-dark.css">
+		<link rel="stylesheet" href="../../css/src/global-media.css">
+
+		<link rel="stylesheet" href="../../css/ext/monokai.css">
+	</head>
+
+	<body class="global__body">
+		<header class="global__header">
+			<div class="global__header-inner">
+				<span class="global__header-logo">
+					<a class="global__header-logo-link"
+					   href="../../index.html">
+						PyBook
+					</a>
+				</span>
+
+				<span class="global__header-links">
+					<a class="global__header-links-link" href="../../glossary.html">глоссарий</a>
+					<a class="global__header-links-link" href="../../about.html">о системе</a>
+				</span>
+			</div>
+		</header>
+
+		<div class="global__path-wrapper">
+			<div class="global__path global__block">
+				<a class="global__path-link" href="../../index.html">главная страница</a> / <a class="global__path-link" href="../section/section-3.html">раздел 3</a> / глава 14
+			</div>
+		</div>
+
+		<aside class="global__left-aside">
+			<nav class="global__menu global__block">
+				<h3 class="global__menu-title">Подпункты:</h3>
+
+				<ul class="global__menu-list">
+					<li class="global__menu-list-item">Цикл for</li>
+					<li class="global__menu-list-item">Генератор range()</li>
+					<li class="global__menu-list-item">Использование цикла for как foreach</li>
+					<li class="global__menu-list-item">Цикл while</li>
+					<li class="global__menu-list-item">Вопросы для проверки</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main class="global__main">
+			 <section class="global__section-content global__block">
+				<img src="../../img/src/title-14.png" alt="превью главы">
+			</section>
+			
+			<section class="global__section-content global__block">
+<h1>14. Циклы в Python</h1>
 
 <p>Итак, теория подошла к концу пришла пора приступить к практике.</p>
 
@@ -9,8 +67,8 @@
 <p>Данный цикл задается в Pyton подобным образом:</p>
 
 <pre><code class="lang-python">
-<span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>):
-	pass
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>):
+	<span class="hljs-keyword">pass</span>
 </code></pre>
 
 <p>Разберём подробнее:</p>
@@ -34,9 +92,9 @@
 <p>Проще всего понять, как используется данный цикл, можно через консоль Python:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>, <span class="hljs-number">5</span>):
-<span class="hljs-meta">... </span>       print(i)
-...
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>, <span class="hljs-number">5</span>):
+<span class="hljs-meta">... </span>       <span class="hljs-keyword">print</span>(i)
+<span class="hljs-meta">... </span>
 <span class="hljs-number">0</span> 
 <span class="hljs-number">5</span>
 <span class="hljs-number">10</span>
@@ -51,32 +109,32 @@
 <p>В данном случае, мы перечислили числа в цикле. Так же, с переменной <code>i</code> можно взаимодействовать, например, следующим образом:</p>
 
 <pre><code class="lang-shell">
-&gt;&gt;&gt; <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(1, 15):
-...     <span class="hljs-keyword">print</span>( <span class="hljs-string">" "</span> * (14 - i), <span class="hljs-string">"*"</span> * ( i + ( i - 1 ) ) )
-... 
-<span class="hljs-comment">              *</span>
-<span class="hljs-comment">             ***</span>
-<span class="hljs-comment">            *****</span>
-<span class="hljs-comment">           *******</span>
-<span class="hljs-comment">          *********</span>
-<span class="hljs-comment">         ***********</span>
-<span class="hljs-comment">        *************</span>
-<span class="hljs-comment">       ***************</span>
-<span class="hljs-comment">      *****************</span>
-<span class="hljs-comment">     *******************</span>
-<span class="hljs-comment">    *********************</span>
-<span class="hljs-comment">   ***********************</span>
-<span class="hljs-comment">  *************************</span>
-<span class="hljs-comment"> ***************************</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(1, 15):
+<span class="hljs-meta">... </span>     <span class="hljs-keyword">print</span>( <span class="hljs-string">" "</span> * (14 - i), <span class="hljs-string">"*"</span> * ( i + ( i - 1 ) ) )
+<span class="hljs-meta">... </span> 
+			  *
+			 ***
+			*****
+		   *******
+		  *********
+		 ***********
+		*************
+	   ***************
+	  *****************
+	 *******************
+	*********************
+   ***********************
+  *************************
+ ***************************
 </code></pre>
 
 <p>И самое сложное — это вложенные циклы. Т.е. цикл в цикле:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
-<span class="hljs-meta">... </span>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
-<span class="hljs-meta">... </span>        print( j, end=<span class="hljs-string">" "</span> )
-<span class="hljs-meta">... </span>    print()
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
+<span class="hljs-meta">... </span>        <span class="hljs-keyword">print</span>( j, end=<span class="hljs-string">" "</span> )
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>()
 <span class="hljs-meta">... </span>
 <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>  
 <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>  
@@ -93,8 +151,8 @@
 <span class="hljs-meta">&gt;&gt;&gt; </span>arr = [ <span class="hljs-string">"pineapple"</span>, <span class="hljs-string">"kiwi"</span>, <span class="hljs-string">"cherry"</span> ]
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> arr:
-<span class="hljs-meta">... </span>    print( item )
-...
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>( item )
+<span class="hljs-meta">... </span> 
 pineapple
 kiwi
 cherry
@@ -105,9 +163,9 @@ cherry
 <pre><code class="lang-shell">
 <span class="hljs-meta">&gt;&gt;&gt; </span>arr = [ <span class="hljs-string">"pineapple"</span>, <span class="hljs-string">"kiwi"</span>, <span class="hljs-string">"cherry"</span> ]
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> index, item <span class="hljs-keyword">in</span> enumerate(arr):
-<span class="hljs-meta">... </span>    print( index, item )
-...
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> index, item <span class="hljs-keyword">in</span> <span class="hljs-keyword">enumerate</span>(arr):
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>( index, item )
+<span class="hljs-meta">... </span> 
 <span class="hljs-number">1</span> pineapple
 <span class="hljs-number">2</span> kiwi
 <span class="hljs-number">3</span> cherry
@@ -140,12 +198,39 @@ cherry
 <span class="hljs-meta">&gt;&gt;&gt; </span>i = <span class="hljs-number">0</span>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">while</span> i &lt; <span class="hljs-number">10</span>:
-<span class="hljs-meta">... </span>    print(i)
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>(i)
 <span class="hljs-meta">... </span>    i += <span class="hljs-number">2</span>
-...
+<span class="hljs-meta">... </span> 
 <span class="hljs-number">0</span>
 <span class="hljs-number">2</span>
 <span class="hljs-number">4</span>
 <span class="hljs-number">6</span>
 <span class="hljs-number">8</span>
 </code></pre>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Вопросы для проверки</h2>
+
+				<ol>
+					<li>Объясните, что такое &quot;цикл&quot;?</li>
+					<li>Как работают циклы?</li>
+					<li>Что может быть задано условием цикла?</li>
+					<li>Что располается в &quot;теле&quot; цикла? </li>
+					<li>Что такое цикл &quot;for&quot;?</li>
+					<li>Что такое цикл &quot;while&quot;?</li>
+					<li>В чём ключевые отличия циклов &quot;for&quot; и &quot;while&quot;?</li>
+				</ol>
+			</section>
+		</main>
+
+		<aside class="global__right-aside">
+
+		</aside>
+
+		<footer class="global__footer">
+			<p class="global__footer-info">Create by Zoya</p>
+			<p class="global__footer-info">2021</p>
+		</footer>
+	</body>
+</html>

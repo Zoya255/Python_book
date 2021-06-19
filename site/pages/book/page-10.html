@@ -1,4 +1,63 @@
-<h1>Методы</h1>
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Учебник по Python</title>
+
+		<link rel="stylesheet" href="../../css/src/global.css">
+		<link rel="stylesheet" href="../../css/src/global-dark.css">
+		<link rel="stylesheet" href="../../css/src/global-media.css">
+
+		<link rel="stylesheet" href="../../css/ext/monokai.css">
+	</head>
+
+	<body class="global__body">
+		<header class="global__header">
+			<div class="global__header-inner">
+				<span class="global__header-logo">
+					<a class="global__header-logo-link"
+					   href="../../index.html">
+						PyBook
+					</a>
+				</span>
+
+				<span class="global__header-links">
+					<a class="global__header-links-link" href="../../glossary.html">глоссарий</a>
+					<a class="global__header-links-link" href="../../about.html">о системе</a>
+				</span>
+			</div>
+		</header>
+
+		<div class="global__path-wrapper">
+			<div class="global__path global__block">
+				<a class="global__path-link" href="../../index.html">главная страница</a> / <a class="global__path-link" href="../section/section-2.html">раздел 2</a> / глава 10
+			</div>
+		</div>
+
+		<aside class="global__left-aside">
+			<nav class="global__menu global__block">
+				<h3 class="global__menu-title">Подпункты:</h3>
+
+				<ul class="global__menu-list">
+					<li class="global__menu-list-item">Коротко о методах</li>
+					<li class="global__menu-list-item">Строковые методы</li>
+					<li class="global__menu-list-item">Особенность строковых методов</li>
+					<li class="global__menu-list-item">Основные строковые методы</li>
+					<li class="global__menu-list-item">Методы массивов</li>
+					<li class="global__menu-list-item">Вопросы для проверки</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main class="global__main">
+			 <section class="global__section-content global__block">
+				<img src="../../img/src/title-10.png" alt="превью главы">
+			</section>
+			
+			<section class="global__section-content global__block">
+<h1>10. Методы</h1>
 
 <h2>Коротко о методах</h2>
 
@@ -9,8 +68,9 @@
 <p>Иначе говоря, это оператор для оператора. Например, если имеется объект <code>Snake</code> ( змея ), у него имеется метод <code>is_long</code> ( она длинная? ), то это выглядит вот так:</p>
 
 <pre><code>
-Snake.<span class="hljs-keyword">is</span><span class="hljs-number">_</span>long()
+Snake.is_long()
 </code></pre>
+
 <p>Теперь рассмотрим более подробно эту запись:</p>
 
 <ul>
@@ -33,10 +93,10 @@ Snake.<span class="hljs-keyword">is</span><span class="hljs-number">_</span>long
 Рассмотрим на примере:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; s = <span class="hljs-string">"string"</span>
-<span class="hljs-meta">&gt;&gt;</span>&gt; s.upper()
+<span class="hljs-meta">&gt;&gt;&gt;</span> s = <span class="hljs-string">"string"</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> s.<span class="hljs-keyword">upper</span>()
 <span class="hljs-string">'STRING'</span>
-<span class="hljs-meta">&gt;&gt;</span>&gt; s
+<span class="hljs-meta">&gt;&gt;&gt;</span> s
 <span class="hljs-string">'string'</span>
 </code></pre>
 
@@ -55,9 +115,9 @@ Snake.<span class="hljs-keyword">is</span><span class="hljs-number">_</span>long
 <p>Т.е. для того, чтобы код отработал как положено, необходимо записать так ( отличие лишь в присвоении ):</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; s = <span class="hljs-string">"string"</span>
-<span class="hljs-meta">&gt;&gt;</span>&gt; s = s.upper()
-<span class="hljs-meta">&gt;&gt;</span>&gt; s
+<span class="hljs-meta">&gt;&gt;&gt;</span> s = <span class="hljs-string">"string"</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> s = s.<span class="hljs-keyword">upper</span>()
+<span class="hljs-meta">&gt;&gt;&gt;</span> s
 <span class="hljs-string">'STRING'</span>
 </code></pre>
 
@@ -74,9 +134,9 @@ Snake.<span class="hljs-keyword">is</span><span class="hljs-number">_</span>long
 <pre><code class="lang-python">
 # Примеры использования:
 
-<span class="hljs-string">"this is string"</span>.capitalize()  # <span class="hljs-symbol">'This</span> <span class="hljs-keyword">is</span> <span class="hljs-built_in">string</span>'
-<span class="hljs-string">"THIS IS STRING"</span>.capitalize()  # <span class="hljs-symbol">'This</span> <span class="hljs-keyword">is</span> <span class="hljs-built_in">string</span>'
-<span class="hljs-string">"ThIs IS STRing"</span>.capitalize()  # <span class="hljs-symbol">'This</span> <span class="hljs-keyword">is</span> <span class="hljs-built_in">string</span>'
+<span class="hljs-string">"this is string"</span>.<span class="hljs-keyword">capitalize</span>()  <span class="hljs-meta"># 'This is string'</span>
+<span class="hljs-string">"THIS IS STRING"</span>.<span class="hljs-keyword">capitalize</span>()  <span class="hljs-meta"># 'This is string'</span>
+<span class="hljs-string">"ThIs IS STRing"</span>.<span class="hljs-keyword">capitalize</span>()  <span class="hljs-meta"># 'This is string'</span>
 </code></pre>
 
 <h3>2. <code>title()</code></h3>
@@ -89,9 +149,9 @@ Snake.<span class="hljs-keyword">is</span><span class="hljs-number">_</span>long
 
 <pre><code class="lang-python"># Примеры использования:
 
-<span class="hljs-string">"this is string"</span>.title()  # <span class="hljs-symbol">'This</span> <span class="hljs-keyword">Is</span> <span class="hljs-built_in">String</span>'
-<span class="hljs-string">"THIS IS STRING"</span>.title()  # <span class="hljs-symbol">'This</span> <span class="hljs-keyword">Is</span> <span class="hljs-built_in">String</span>'
-<span class="hljs-string">"ThIs IS STRing"</span>.title()  # <span class="hljs-symbol">'This</span> <span class="hljs-keyword">Is</span> <span class="hljs-built_in">String</span>'
+<span class="hljs-string">"this is string"</span>.<span class="hljs-keyword">title</span>()  <span class="hljs-meta"># 'This Is String'</span>
+<span class="hljs-string">"THIS IS STRING"</span>.<span class="hljs-keyword">title</span>()  <span class="hljs-meta"># 'This Is String'</span>
+<span class="hljs-string">"ThIs IS STRing"</span>.<span class="hljs-keyword">title</span>()  <span class="hljs-meta"># 'This Is String'</span>
 </code></pre>
 
 <h3>3. <code>upper()</code></h3>
@@ -105,9 +165,9 @@ Snake.<span class="hljs-keyword">is</span><span class="hljs-number">_</span>long
 <pre><code class="lang-python">
 <span class="hljs-meta"># Примеры использования:</span>
 
-<span class="hljs-string">"big string"</span>.upper()  <span class="hljs-meta"># <span class="hljs-string">'BIG STRING'</span></span>
-<span class="hljs-string">"BIG STRING"</span>.upper()  <span class="hljs-meta"># <span class="hljs-string">'BIG STRING'</span></span>
-<span class="hljs-string">"BiG STRing"</span>.upper()  <span class="hljs-meta"># <span class="hljs-string">'BIG STRING'</span></span>
+<span class="hljs-string">"big string"</span>.<span class="hljs-keyword">upper</span>()  <span class="hljs-meta"># 'BIG STRING'</span>
+<span class="hljs-string">"BIG STRING"</span>.<span class="hljs-keyword">upper</span>()  <span class="hljs-meta"># 'BIG STRING'</span>
+<span class="hljs-string">"BiG STRing"</span>.<span class="hljs-keyword">upper</span>()  <span class="hljs-meta"># 'BIG STRING'</span>
 </code></pre>
 
 <h3>4. <code>lower()</code></h3>
@@ -180,10 +240,10 @@ s.<span class="hljs-keyword">find</span>(<span class="hljs-string">"A"</span>)  
 <pre><code class="lang-python">
 <span class="hljs-meta"># Примеры использования:</span>
 
-<span class="hljs-string">"  some data  "</span>.strip()      <span class="hljs-meta"># <span class="hljs-string">'some data'</span></span>
-<span class="hljs-string">" some data   "</span>.strip(<span class="hljs-string">" "</span>)   <span class="hljs-meta"># <span class="hljs-string">'some data'</span></span>
-<span class="hljs-string">"_= data -="</span>.strip(<span class="hljs-string">"_=- "</span>)   <span class="hljs-meta"># <span class="hljs-string">'data'</span></span>
-<span class="hljs-string">"bac[data]bca"</span>.strip(<span class="hljs-string">"abc"</span>)  <span class="hljs-meta"># <span class="hljs-string">'[data]'</span></span>
+<span class="hljs-string">"  some data  "</span>.<span class="hljs-keyword">strip</span>()      <span class="hljs-meta"># 'some data'</span>
+<span class="hljs-string">" some data   "</span>.<span class="hljs-keyword">strip</span>(<span class="hljs-string">" "</span>)   <span class="hljs-meta"># 'some data'</span>
+<span class="hljs-string">"_= data -="</span>.<span class="hljs-keyword">strip</span>(<span class="hljs-string">"_=- "</span>)   <span class="hljs-meta"># 'data'</span>
+<span class="hljs-string">"bac[data]bca"</span>.<span class="hljs-keyword">strip</span>(<span class="hljs-string">"abc"</span>)  <span class="hljs-meta"># '[data]'</span>
 </code></pre>
 
 <h3>8. <code>replace()</code></h3>
@@ -197,12 +257,12 @@ s.<span class="hljs-keyword">find</span>(<span class="hljs-string">"A"</span>)  
 <pre><code class="lang-python">
 <span class="hljs-meta"># Примеры использования:</span>
 
-<span class="hljs-string">"Apple is yellow"</span>.replace( <span class="hljs-string">"yellow"</span>, <span class="hljs-string">"red"</span> )     <span class="hljs-meta"># <span class="hljs-string">'Apple is red'</span></span>
-<span class="hljs-string">"Apple is orange"</span>.replace( <span class="hljs-string">"orange"</span>, <span class="hljs-string">"red"</span>, <span class="hljs-number">0</span> )  <span class="hljs-meta"># <span class="hljs-string">'Apple is orange'</span></span>
+<span class="hljs-string">"Apple is yellow"</span>.<span class="hljs-keyword">replace</span>( <span class="hljs-string">"yellow"</span>, <span class="hljs-string">"red"</span> )     <span class="hljs-meta"># 'Apple is red'</span>
+<span class="hljs-string">"Apple is orange"</span>.<span class="hljs-keyword">replace</span>( <span class="hljs-string">"orange"</span>, <span class="hljs-string">"red"</span>, <span class="hljs-number">0</span> )  <span class="hljs-meta"># 'Apple is orange'</span>
 
-<span class="hljs-string">"ha-ha-ha-ha-ha"</span>.replace( <span class="hljs-string">"ha"</span>, <span class="hljs-string">"ho"</span> )         <span class="hljs-meta"># <span class="hljs-string">'ho-ho-ho-ho-ho'</span></span>
-<span class="hljs-string">"ha-ha-ha-ha-ha"</span>.replace( <span class="hljs-string">"ha"</span>, <span class="hljs-string">"ho"</span>, <span class="hljs-number">-1</span> )     <span class="hljs-meta"># <span class="hljs-string">'ho-ho-ho-ho-ho'</span></span>
-<span class="hljs-string">"ha-ha-ha-ha-ha"</span>.replace( <span class="hljs-string">"ha"</span>, <span class="hljs-string">"ho"</span>, <span class="hljs-number">2</span> )      <span class="hljs-meta"># <span class="hljs-string">'ho-ho-ha-ha-ha'</span></span>
+<span class="hljs-string">"ha-ha-ha-ha-ha"</span>.<span class="hljs-keyword">replace</span>( <span class="hljs-string">"ha"</span>, <span class="hljs-string">"ho"</span> )         <span class="hljs-meta"># 'ho-ho-ho-ho-ho'</span>
+<span class="hljs-string">"ha-ha-ha-ha-ha"</span>.<span class="hljs-keyword">replace</span>( <span class="hljs-string">"ha"</span>, <span class="hljs-string">"ho"</span>, <span class="hljs-number">-1</span> )     <span class="hljs-meta"># 'ho-ho-ho-ho-ho'</span>
+<span class="hljs-string">"ha-ha-ha-ha-ha"</span>.<span class="hljs-keyword">replace</span>( <span class="hljs-string">"ha"</span>, <span class="hljs-string">"ho"</span>, <span class="hljs-number">2</span> )      <span class="hljs-meta"># 'ho-ho-ha-ha-ha'</span>
 </code></pre>
 
 <h2>Методы массивов</h2>
@@ -220,9 +280,43 @@ s.<span class="hljs-keyword">find</span>(<span class="hljs-string">"A"</span>)  
 </code></pre>
 
 <pre><code class="lang-python">
-<span class="hljs-attr"># Примеры использования:
-arr = [ 5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span> ]
+<span class="hljs-comment"># Примеры использования:</span>
+arr = [ <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span> ]
 
-arr.sort<span class="hljs-comment">()</span>  <span class="hljs-attr"># [1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]
-arr.sort<span class="hljs-comment">( reverse = True )</span>   <span class="hljs-attr"># [9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]
+arr.<span class="hljs-title">sort</span>()   <span class="hljs-comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+arr.<span class="hljs-title">sort</span>( reverse = True )  <span class="hljs-comment"># [9, 8, 7, 6, 5, 4, 3, 2, 1]</span>
 </code></pre>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Вопросы для проверки</h2>
+
+				<ol>
+					<li>Дайте определение термину &quot;метод&quot;.</li>
+					<li>Дайте определение термину &quot;строковые методы&quot;.</li>
+					<li>Перечислите основные строковые методы.</li>
+					<li>В чём главная особенность строковых методов?</li>
+					<li>Какой основной метод массива?</li>
+				</ol>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Практические задания</h2>
+
+				<ol>
+					<li>Проверить все методы, представленные в главе, на практике, изучить их возможности</li>
+					<li>Создать программу для нормализации текста ( т.е. исправления исковерканной строки )</li>
+				</ol>
+			</section>
+		</main>
+
+		<aside class="global__right-aside">
+
+		</aside>
+
+		<footer class="global__footer">
+			<p class="global__footer-info">Create by Zoya</p>
+			<p class="global__footer-info">2021</p>
+		</footer>
+	</body>
+</html>

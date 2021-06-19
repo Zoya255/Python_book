@@ -1,3 +1,63 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Учебник по Python</title>
+
+		<link rel="stylesheet" href="../../css/src/global.css">
+		<link rel="stylesheet" href="../../css/src/global-dark.css">
+		<link rel="stylesheet" href="../../css/src/global-media.css">
+
+		<link rel="stylesheet" href="../../css/ext/monokai.css">
+	</head>
+
+	<body class="global__body">
+		<header class="global__header">
+			<div class="global__header-inner">
+				<span class="global__header-logo">
+					<a class="global__header-logo-link"
+					   href="../../index.html">
+						PyBook
+					</a>
+				</span>
+
+				<span class="global__header-links">
+					<a class="global__header-links-link" href="../../glossary.html">глоссарий</a>
+					<a class="global__header-links-link" href="../../about.html">о системе</a>
+				</span>
+			</div>
+		</header>
+
+		<div class="global__path-wrapper">
+			<div class="global__path global__block">
+				<a class="global__path-link" href="../../index.html">главная страница</a> / <a class="global__path-link" href="../section/section-2.html">раздел 2</a> / глава 9
+			</div>
+		</div>
+
+		<aside class="global__left-aside">
+			<nav class="global__menu global__block">
+				<h3 class="global__menu-title">Подпункты:</h3>
+
+				<ul class="global__menu-list">
+					<li class="global__menu-list-item">Функция</li>
+					<li class="global__menu-list-item">Математические операторы</li>
+					<li class="global__menu-list-item">Сокращенные математические операторы</li>
+					<li class="global__menu-list-item">Логические операторы</li>
+					<li class="global__menu-list-item">Оператор взаимодействия с пользователем</li>
+					<li class="global__menu-list-item">Операторы массивов</li>
+					<li class="global__menu-list-item">Вопросы для проверки</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main class="global__main">
+			<section class="global__section-content global__block">
+				<img src="../../img/src/title-9.png" alt="превью главы">
+			</section>
+			
+			<section class="global__section-content global__block">
 <h1>9. Операторы</h1>
 
 <blockquote>
@@ -40,8 +100,8 @@ I can <span class="hljs-keyword">print</span> a Hello World!
 
 <p>Данный оператор, как понятно из названия данного раздела производит сложение двух переменных. Так же этот оператор способен складывать пару строк из списка, но не может складывать разные типы.</p>
 
-<pre><code class="lang-python"
->sum_int1 = <span class="hljs-number">5</span> + <span class="hljs-number">10</span> + <span class="hljs-number">15</span>            # <span class="hljs-number">30</span>
+<pre><code class="lang-python">
+sum_int1 = <span class="hljs-number">5</span> + <span class="hljs-number">10</span> + <span class="hljs-number">15</span>            # <span class="hljs-number">30</span>
 sum_int2 = <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span>          # abcdef
 sum_int3 = [ <span class="hljs-number">1</span> ] + [ <span class="hljs-number">2</span> ] + [ <span class="hljs-number">3</span> ]  # [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ]
 </code></pre>
@@ -262,3 +322,41 @@ min( { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <
 <span class="hljs-keyword">sum</span>( { <span class="hljs-number">1</span>: <span class="hljs-number">2</span>, <span class="hljs-number">3</span>: <span class="hljs-number">4</span> } )  <span class="hljs-meta"># 6</span>
 <span class="hljs-keyword">sum</span>( { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> } )     <span class="hljs-meta"># 6</span>
 </code></pre>
+			</section>
+
+			<section class="global__section-content global__block">						
+				<h2>Вопросы для проверки</h2>
+
+				<ol>
+					<li>Дайте определение термину &quot;оператор&quot;.</li>
+					<li>Дайте определение термину &quot;функция&quot;.</li>
+					<li>Какие есть типы математичческих операторов?</li>
+					<li>Дайте определение &quot;сокращенным математическим операторам&quot;.</li>
+					<li>Какие действия можно производить с сокращенными математическими операторами?</li>
+					<li>Какие есть типы логических операторов?</li>
+					<li>Какие есть типы операторов взаимодействия с пользователем?</li>
+				</ol>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Практические задания</h2>
+
+				<ol>
+					<li>Поэкспеременировать с операторами, узнать на практике их возможности.</li>
+					<li>Написать программу, которая спрашивает имя пользователя и приветствует его, учитывая это имя.</li>
+					<li>Написать программу для вычисления площади прямоугольника, на основании его сторон.</li>
+					<li>Написать программу для вычисления корней квадратного уравнения на основе его коэфициентов ( предполается, что корней всегда будет два ).</li>
+				</ol>
+			</section>
+		</main>
+
+		<aside class="global__right-aside">
+
+		</aside>
+
+		<footer class="global__footer">
+			<p class="global__footer-info">Create by Zoya</p>
+			<p class="global__footer-info">2021</p>
+		</footer>
+	</body>
+</html>
