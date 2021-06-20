@@ -63,8 +63,8 @@
 <p>Данная конструкция языка определяется следующим образом:</p>
 
 <pre><code class="lang-python">
-<span class="hljs-keyword">if</span> <span class="hljs-selector-tag">i</span> &lt; <span class="hljs-number">10</span>:
-	pass
+<span class="hljs-keyword">if</span> i &lt; <span class="hljs-number">10</span>:
+    <span class="hljs-keyword">pass</span>
 </code></pre>
 
 <p>Разберём подробнее:</p>
@@ -80,8 +80,8 @@
 <pre><code class="lang-shell">
 <span class="hljs-meta">&gt;&gt;&gt; </span>i = <span class="hljs-number">0</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">if</span> i == <span class="hljs-number">0</span>:
-<span class="hljs-meta">... </span>    print(<span class="hljs-keyword">True</span>)
-...
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>(<span class="hljs-keyword">True</span>)
+<span class="hljs-meta">... </span>
 <span class="hljs-keyword">True</span>
 </code></pre>
 
@@ -91,9 +91,9 @@
 
 <pre><code class="lang-python">
 <span class="hljs-keyword">if</span> boolean:
-	<span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">pass</span>
 <span class="hljs-keyword">else</span>:
-	<span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">pass</span>
 </code></pre>
 
 <p>Из нового здесь лишь <code>else</code> - ключевое слово, часть оператора ветвления.</p>
@@ -101,9 +101,9 @@
 <p>Кстати, с этим связана одна интересная ошибка. Если написать следующим образом, то код в <code>else</code> никогда не выполнится, а IDE вероятно выдаст предупреждение:</p>
 
 <pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-keyword">True</span>:
-	<span class="hljs-keyword">print</span>( <span class="hljs-string">"Я вывожусь всегда )"</span> )
+    <span class="hljs-keyword">print</span>( <span class="hljs-string">"Я вывожусь всегда )"</span> )
 <span class="hljs-keyword">else</span>:
-	<span class="hljs-keyword">print</span>( <span class="hljs-string">"Меня никогда не покажут ("</span> )
+    <span class="hljs-keyword">print</span>( <span class="hljs-string">"Меня никогда не покажут ("</span> )
 </code></pre>
 
 <p>Это связанно с тем, что условие в <code>if</code> всегда верно, а значит выполнение просто никогда не дойдёт до <code>else</code>. И пусть именно такая форма записи встречается редко, но более вероятная путаница между <code>=</code> и <code>==</code> может привести к тому же.</p>
@@ -114,11 +114,11 @@
 
 <pre><code class="lang-python">
 <span class="hljs-keyword">if</span> check1:
-	<span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">pass</span>
 <span class="hljs-keyword">elif</span> check2:
-	<span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">pass</span>
 <span class="hljs-keyword">else</span>:
-	<span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">pass</span>
 </code></pre>
 
 <p>Из нового здесь лишь <code>elif</code> - ключевое слово, сокращение от <code>else if</code>, альтенативный вариант ветвления</p>
@@ -127,12 +127,12 @@
 
 <pre><code class="lang-python">
 <span class="hljs-keyword">if</span> check1:
-	<span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">pass</span>
 <span class="hljs-keyword">else</span>:
-	<span class="hljs-keyword">if</span> check2:
-		<span class="hljs-keyword">pass</span>
-	<span class="hljs-keyword">else</span>:
-		<span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">if</span> check2:
+        <span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">pass</span>
 </code></pre>
 
 <p>На деле, два вышеприведённых примера полностью идентичны, но первый куда понятнее и проще - а второй напротив, сложнее. Но в целом, они полностью взаимозаменяемы.</p>
@@ -146,18 +146,18 @@
 <p>Данный код просто проверяет, делится ли число на 2 нацело.</p>
 
 <pre><code class="lang-python">
-<span class="hljs-keyword">number</span> = <span class="hljs-number">0</span>
+number = <span class="hljs-number">0</span>
 
-<span class="hljs-keyword">if</span> <span class="hljs-keyword">number</span> % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:
-	<span class="hljs-keyword">print</span>( <span class="hljs-keyword">f</span><span class="hljs-string">"Число {number} чётное"</span> )
+<span class="hljs-keyword">if</span> number % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:
+    <span class="hljs-keyword">print</span>( f<span class="hljs-string">"Число {number} чётное"</span> )
 <span class="hljs-keyword">else</span>:
-	<span class="hljs-keyword">print</span>( <span class="hljs-keyword">f</span><span class="hljs-string">"Число {number} нечётное"</span> )
+    <span class="hljs-keyword">print</span>( f<span class="hljs-string">"Число {number} нечётное"</span> )
 </code></pre>
 
 <p>Результат выполнения данного кода:</p>
 
 <pre><code class="lang-text">
-<span class="hljs-keyword">Число</span> <span class="hljs-number">0</span> чётное
+Число 0 чётное
 </code></pre>
 
 <h3>Сравнение двух чисел</h3>
@@ -165,21 +165,21 @@
 <p>Данный код просто сравнивает два числа и выводит результат.</p>
 
 <pre><code class="lang-python">
-number1 = 10
-number2 = 20
+number1 = <span class="hljs-number">10</span>
+number2 = <span class="hljs-number">20</span>
 
 <span class="hljs-keyword">if</span> number1 &gt; number2:
-	<span class="hljs-built_in">print</span>( f<span class="hljs-string">"Число {number1} больше числа {number2}"</span> )
+    <span class="hljs-built_in">print</span>( f<span class="hljs-string">"Число {number1} больше числа {number2}"</span> )
 <span class="hljs-keyword">elif</span> number1 &lt; number2:
-	<span class="hljs-built_in">print</span>( f<span class="hljs-string">"Число {number1} меньше числа {number2}"</span> )
+    <span class="hljs-built_in">print</span>( f<span class="hljs-string">"Число {number1} меньше числа {number2}"</span> )
 <span class="hljs-keyword">else</span>:
-	<span class="hljs-built_in">print</span>( f<span class="hljs-string">"Числа {number1} и {number2} одинаковы"</span> )
+    <span class="hljs-built_in">print</span>( f<span class="hljs-string">"Числа {number1} и {number2} одинаковы"</span> )
 </code></pre>
 
 <p>Результат выполнения данного кода:</p>
 
 <pre><code class="lang-text">
-Число <span class="hljs-number">10</span> меньше числа <span class="hljs-number">20</span>
+Число 10 меньше числа 20
 </code></pre>
 
 <h3>Проверка строки на длину:</h3>
@@ -187,21 +187,21 @@ number2 = 20
 <p>Данный код просто сверяет длину строки с заданной длиной.</p>
 
 <pre><code class="lang-python">
-<span class="hljs-built_in">length</span> = <span class="hljs-number">10</span>
-<span class="hljs-built_in">string</span> = <span class="hljs-string">"abcdef"</span>
+length = <span class="hljs-number">10</span>
+string = <span class="hljs-string">"abcdef"</span>
 
-<span class="hljs-keyword">if</span> len( <span class="hljs-built_in">string</span> ) &gt; <span class="hljs-built_in">length</span>:
-	<span class="hljs-built_in">print</span>( f<span class="hljs-string">"Строка {string} длиннее {length} символов"</span> )
-elif len( <span class="hljs-built_in">string</span> ) &lt; <span class="hljs-built_in">length</span>:
-	<span class="hljs-built_in">print</span>( f<span class="hljs-string">"Строка {string} короче {length} символов"</span> )
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">len</span>( string ) &gt; length:
+    <span class="hljs-built_in">print</span>( f<span class="hljs-string">"Строка {string} длиннее {length} символов"</span> )
+<span class="hljs-keyword">elif</span> <span class="hljs-keyword">len</span>( string ) &lt; length:
+    <span class="hljs-built_in">print</span>( f<span class="hljs-string">"Строка {string} короче {length} символов"</span> )
 <span class="hljs-keyword">else</span>:
-	<span class="hljs-built_in">print</span>( f<span class="hljs-string">"Строка {string} равна {length} символам"</span> )
+    <span class="hljs-built_in">print</span>( f<span class="hljs-string">"Строка {string} равна {length} символам"</span> )
 </code></pre>
 
 <p>Результат выполнения данного кода:</p>
 
 <pre><code class="lang-text">
-<span class="hljs-keyword">Строка</span> abcdef короче <span class="hljs-number">10</span> символов
+Строка abcdef короче 10 символов
 </code></pre>
 			</section>
 
@@ -216,6 +216,18 @@ elif len( <span class="hljs-built_in">string</span> ) &lt; <span class="hljs-bui
 					<li>Как сравнить длину двух строк?</li>
 					<li>Как получить минимум из трёх чисел?</li>
 					<li>Как узнать, является ли номер билета счастливым? ( т.е. сравнить, равна ли сумма первых трёх чисел шестизначного числа, сумме последних трёх? )</li>
+				</ol>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Практические задания</h2>
+
+				<ol>
+					<li>Поэксперементировать и разобраться с работой оператора ветвления.</li>
+					<li>Написать программу для нахождения корней квадратных уравнений на основе их коэфициентов ( корни могут быть любые ).</li>
+					<li>Написать программу для поиска минимального их двух чисел, не используя встроенные функции <code>min()</code> и <code>max()</code>.</li>
+					<li>Найти все пути объединения двух операторов ветвления воедино.</li>
+					<li>Написать программу для поиска максимального из трёх чисел.</li>
 				</ol>
 			</section>
 		</main>

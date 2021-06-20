@@ -68,7 +68,7 @@
 
 <pre><code class="lang-python">
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>):
-	<span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">pass</span>
 </code></pre>
 
 <p>Разберём подробнее:</p>
@@ -93,36 +93,36 @@
 
 <pre><code class="lang-shell">
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>, <span class="hljs-number">5</span>):
-<span class="hljs-meta">... </span>       <span class="hljs-keyword">print</span>(i)
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>(i)
 <span class="hljs-meta">... </span>
-<span class="hljs-number">0</span> 
-<span class="hljs-number">5</span>
-<span class="hljs-number">10</span>
-<span class="hljs-number">15</span>
-<span class="hljs-number">25</span>
-<span class="hljs-number">30</span>
-<span class="hljs-number">35</span>
-<span class="hljs-number">40</span>
-<span class="hljs-number">45</span>
+0
+5
+10
+15
+25
+30
+35
+40
+45
 </code></pre>
 
 <p>В данном случае, мы перечислили числа в цикле. Так же, с переменной <code>i</code> можно взаимодействовать, например, следующим образом:</p>
 
 <pre><code class="lang-shell">
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(1, 15):
-<span class="hljs-meta">... </span>     <span class="hljs-keyword">print</span>( <span class="hljs-string">" "</span> * (14 - i), <span class="hljs-string">"*"</span> * ( i + ( i - 1 ) ) )
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>( <span class="hljs-string">" "</span> * (14 - i), <span class="hljs-string">"*"</span> * ( i + ( i - 1 ) ) )
 <span class="hljs-meta">... </span> 
-			  *
-			 ***
-			*****
-		   *******
-		  *********
-		 ***********
-		*************
-	   ***************
-	  *****************
-	 *******************
-	*********************
+              *
+             ***
+            *****
+           *******
+          *********
+         ***********
+        *************
+       ***************
+      *****************
+     *******************
+    *********************
    ***********************
   *************************
  ***************************
@@ -136,11 +136,11 @@
 <span class="hljs-meta">... </span>        <span class="hljs-keyword">print</span>( j, end=<span class="hljs-string">" "</span> )
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>()
 <span class="hljs-meta">... </span>
-<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>  
-<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>  
-<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>  
-<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> 
-<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>
+1 2 3 4 5  
+1 2 3 4 5  
+1 2 3 4 5  
+1 2 3 4 5 
+1 2 3 4 5
 </code></pre>
 
 <h2>Использование цикла <code>for</code> как <code>foreach</code></h2>
@@ -166,9 +166,9 @@ cherry
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> index, item <span class="hljs-keyword">in</span> <span class="hljs-keyword">enumerate</span>(arr):
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>( index, item )
 <span class="hljs-meta">... </span> 
-<span class="hljs-number">1</span> pineapple
-<span class="hljs-number">2</span> kiwi
-<span class="hljs-number">3</span> cherry
+1 pineapple
+2 kiwi
+3 cherry
 </code></pre>
 
 <h2>Цикл <code>while</code></h2>
@@ -177,7 +177,7 @@ cherry
 
 <pre><code class="lang-python">
 <span class="hljs-keyword">while</span> i &lt; <span class="hljs-number">10</span>:
-	<span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">pass</span>
 </code></pre>
 
 <p>Разберём данную запись подробнее:</p>
@@ -201,11 +201,11 @@ cherry
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">print</span>(i)
 <span class="hljs-meta">... </span>    i += <span class="hljs-number">2</span>
 <span class="hljs-meta">... </span> 
-<span class="hljs-number">0</span>
-<span class="hljs-number">2</span>
-<span class="hljs-number">4</span>
-<span class="hljs-number">6</span>
-<span class="hljs-number">8</span>
+0
+2
+4
+6
+8
 </code></pre>
 			</section>
 
@@ -220,6 +220,18 @@ cherry
 					<li>Что такое цикл &quot;for&quot;?</li>
 					<li>Что такое цикл &quot;while&quot;?</li>
 					<li>В чём ключевые отличия циклов &quot;for&quot; и &quot;while&quot;?</li>
+				</ol>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Практические задания</h2>
+
+				<ol>
+					<li>Попрактиковаться в написании циклов и разобраться в этом на практике</li>
+					<li>Понять, в чём ключевая разница между циклами <code>for</code>, <code>foreach</code> и <code>while</code></li>
+					<li>Написать программу для вывода чётных чисел до заданного числа</li>
+					<li>Написать программу-тестер</li>
+					<li>Написать программу, которая принимает заданное заранее количество чисел ( по одному за раз ), и затем выводит их в обратном порядке</li>
 				</ol>
 			</section>
 		</main>

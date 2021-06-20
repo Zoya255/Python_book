@@ -76,34 +76,34 @@
 
 <pre><code class="lang-python">
 <span class="hljs-comment"># Дано</span>
-<span class="hljs-keyword">a</span> = <span class="hljs-number">10</span>
+a = <span class="hljs-number">10</span>
 b = <span class="hljs-number">20</span>
 
 <span class="hljs-comment"># Решение</span>
-<span class="hljs-keyword">a</span>, b = b, <span class="hljs-keyword">a</span>
+a, b = b, a
 </code></pre>
 
 <p>Поначалу это может показаться странным, но это просто логичное следствие множественных переменных, т.е. возможность перечислять переменные через запятую. Например:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; a, b, c = <span class="hljs-number">10</span> , <span class="hljs-number">20</span> , <span class="hljs-number">40</span>
-<span class="hljs-meta">&gt;&gt;</span>&gt; a
+<span class="hljs-meta">&gt;&gt;&gt;</span> a, b, c = <span class="hljs-number">10</span> , <span class="hljs-number">20</span> , <span class="hljs-number">40</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> a
 <span class="hljs-number">10</span>
-<span class="hljs-meta">&gt;&gt;</span>&gt; b
+<span class="hljs-meta">&gt;&gt;&gt;</span> b
 <span class="hljs-number">20</span>
-<span class="hljs-meta">&gt;&gt;</span>&gt; c
+<span class="hljs-meta">&gt;&gt;&gt;</span> c
 <span class="hljs-number">40</span>
 </code></pre>
 
 <p>Помимо краткого объявления переменных, с ними можно похожим образом можно производить и действия, главное тут — соблюдать порядок. Например:</p>
 
 <pre><code class="lang-shell">
-&gt;&gt;&gt; a, b, c = <span class="hljs-number">10</span> + <span class="hljs-number">10</span> , <span class="hljs-number">20</span> * <span class="hljs-number">2</span> , <span class="hljs-number">2</span> ** <span class="hljs-number">6</span>
-&gt;&gt;&gt; a
+<span class="hljs-meta">&gt;&gt;&gt;</span> a, b, c = <span class="hljs-number">10</span> + <span class="hljs-number">10</span> , <span class="hljs-number">20</span> * <span class="hljs-number">2</span> , <span class="hljs-number">2</span> ** <span class="hljs-number">6</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> a
 <span class="hljs-number">20</span>
-&gt;&gt;&gt; b
+<span class="hljs-meta">&gt;&gt;&gt;</span> b
 <span class="hljs-number">40</span>
-&gt;&gt;&gt; c
+<span class="hljs-meta">&gt;&gt;&gt;</span> c
 <span class="hljs-number">64</span>
 </code></pre>
 
@@ -118,13 +118,13 @@ b = <span class="hljs-number">20</span>
 <p>Итак, пришло время узнать правду. На самом деле строки в Python - это не строки. На деле это массивы символов. И доказать это куда проще, чем кажется. Попробуем обратится к букве по индексу:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; s = <span class="hljs-string">"string"</span>
-<span class="hljs-meta">&gt;&gt;</span>&gt; s[<span class="hljs-number">0</span>]
-s
-<span class="hljs-meta">&gt;&gt;</span>&gt; s[<span class="hljs-number">2</span>]
-r
-<span class="hljs-meta">&gt;&gt;</span>&gt; s[<span class="hljs-number">5</span>]
-g
+<span class="hljs-meta">&gt;&gt;&gt;</span> s = <span class="hljs-string">"string"</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> s[<span class="hljs-number">0</span>]
+<span class="hljs-string">'s'</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> s[<span class="hljs-number">2</span>]
+<span class="hljs-string">'s'</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> s[<span class="hljs-number">5</span>]
+<span class="hljs-string">'s'</span>
 </code></pre>
 
 <p>Это и правда работает, а следовательно, строка — это массив символов. Однако, к строке всё равно нельзя применять методы массивов, так как всё-же это разные типы. Однако преобразования никто не отменял.</p>
@@ -134,13 +134,13 @@ g
 <p>Можно ли перемножить строку или массив на число? Пусть здравый смысл и говорит, что это невозможно, но Python это позволяет. На самом деле на число можно перемножать только массивы, но так как строка — это тоже массив, то можно и его. При этом, в итоге получится массив, продублированный n-ое количество раз.</p>
 
 <pre><code class="lang-shell">
-&gt;&gt;&gt; str = <span class="hljs-string">"string "</span>
-&gt;&gt;&gt; arr = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ]
+<span class="hljs-meta">&gt;&gt;&gt;</span> str = <span class="hljs-string">"string "</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> arr = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ]
 
-&gt;&gt;&gt; str * <span class="hljs-number">3</span>
-<span class="hljs-type">string</span> <span class="hljs-type">string</span> <span class="hljs-type">string</span> 
+<span class="hljs-meta">&gt;&gt;&gt;</span> str * <span class="hljs-number">3</span>
+<span class="hljs-string">'string string string'</span> 
 
-&gt;&gt;&gt; arr * <span class="hljs-number">3</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> arr * <span class="hljs-number">3</span>
 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
 </code></pre>
 
@@ -155,15 +155,15 @@ g
 <p>Проще всего это понять на примере. К примеру, есть массив чисел, из которого нужно взять первые пять элементов. Это реализуется следующим образом:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span> ]
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers[<span class="hljs-number">0</span><span class="hljs-symbol">:</span><span class="hljs-number">5</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span> ]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers[<span class="hljs-number">0</span><span class="hljs-symbol">:</span><span class="hljs-number">5</span>]
 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
 </code></pre>
 
 <p>Синтаксис похож на обычное получение элемента из массива, только вместо индекса — интервал. </p>
 
 <pre><code class="lang-text">
-массив<span class="hljs-string">[ начало : конец : шаг ]</span>
+массив[ начало : конец : шаг ]
 </code></pre>
 
 <p>Рассмотрим пока первые два аргумента. У них есть три важных момента:</p>
@@ -177,50 +177,53 @@ g
 <p>Например:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span> ]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span> ]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers[<span class="hljs-number">0</span><span class="hljs-symbol">:</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers[<span class="hljs-number">0</span><span class="hljs-symbol">:</span>]
 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers[<span class="hljs-number">5</span><span class="hljs-symbol">:</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers[<span class="hljs-number">5</span><span class="hljs-symbol">:</span>]
 [<span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers[<span class="hljs-symbol">:</span><span class="hljs-number">5</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers[<span class="hljs-symbol">:</span><span class="hljs-number">5</span>]
 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers[<span class="hljs-symbol">:</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers[<span class="hljs-symbol">:</span>]
 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers[-<span class="hljs-number">3</span><span class="hljs-symbol">:</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers[-<span class="hljs-number">3</span><span class="hljs-symbol">:</span>]
 numbers[-<span class="hljs-number">3</span><span class="hljs-symbol">:</span>]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers[-<span class="hljs-number">6</span><span class="hljs-symbol">:-</span><span class="hljs-number">2</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers[-<span class="hljs-number">6</span><span class="hljs-symbol">:-</span><span class="hljs-number">2</span>]
 [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]
 </code></pre>
+
 <p>И, наконец, третий аргумент — это шаг. У него есть интересное свойство — при отрицательных значениях он будет идти наоборот. Это часто используется что-бы перевернуть массив:</p>
-<pre><code class="lang-shell"><span class="hljs-meta">&gt;&gt;</span>&gt; numbers = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span> ]
-<span class="hljs-meta">&gt;&gt;</span>&gt; numbers[<span class="hljs-symbol">:</span><span class="hljs-symbol">:-</span><span class="hljs-number">1</span>]
+
+<pre><code class="lang-shell">
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span> ]
+<span class="hljs-meta">&gt;&gt;&gt;</span> numbers[::<span class="hljs-number">-1</span>]
 [<span class="hljs-number">10</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]
 </code></pre>
 
 <p>И самое крутое — всё вышеперечисленное можно отнести и к строкам, на них примеры даже нагляднее:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; str = <span class="hljs-string">"Very long string variable"</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> str = <span class="hljs-string">"Very long string variable"</span>
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; str[<span class="hljs-number">0</span><span class="hljs-symbol">:</span><span class="hljs-number">4</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> str[<span class="hljs-number">0</span><span class="hljs-symbol">:</span><span class="hljs-number">4</span>]
 <span class="hljs-string">'Very'</span>
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; str[<span class="hljs-number">5</span><span class="hljs-symbol">:</span><span class="hljs-number">9</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> str[<span class="hljs-number">5</span><span class="hljs-symbol">:</span><span class="hljs-number">9</span>]
 <span class="hljs-string">'long'</span>
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; str[<span class="hljs-number">10</span><span class="hljs-symbol">:</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> str[<span class="hljs-number">10</span><span class="hljs-symbol">:</span>]
 <span class="hljs-string">'string variable'</span>
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; str[-<span class="hljs-number">8</span><span class="hljs-symbol">:</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> str[-<span class="hljs-number">8</span><span class="hljs-symbol">:</span>]
 <span class="hljs-string">'variable'</span>
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; str[<span class="hljs-symbol">:</span><span class="hljs-symbol">:-</span><span class="hljs-number">1</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> str[<span class="hljs-symbol">:</span><span class="hljs-symbol">:-</span><span class="hljs-number">1</span>]
 <span class="hljs-string">'elbairav gnirts gnol yreV'</span>
 </code></pre>
 
@@ -229,19 +232,19 @@ numbers[-<span class="hljs-number">3</span><span class="hljs-symbol">:</span>]
 <p>Это может казаться неочевидным, но слайсы можно использовать для изменения массивов ( но не строк ), наравне с обычными индексами. Например, как заменить или удалить часть массива:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; arr = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span> ]
+<span class="hljs-meta">&gt;&gt;&gt;</span> arr = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span> ]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; arr[<span class="hljs-number">2</span><span class="hljs-symbol">:</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> arr[<span class="hljs-number">2</span><span class="hljs-symbol">:</span>]
 [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; arr[<span class="hljs-number">2</span><span class="hljs-symbol">:</span>] = [ <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span> ]
+<span class="hljs-meta">&gt;&gt;&gt;</span> arr[<span class="hljs-number">2</span><span class="hljs-symbol">:</span>] = [ <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span> ]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; arr
+<span class="hljs-meta">&gt;&gt;&gt;</span> arr
 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; del arr[<span class="hljs-symbol">:</span><span class="hljs-number">1</span>]
+<span class="hljs-meta">&gt;&gt;&gt;</span> del arr[<span class="hljs-symbol">:</span><span class="hljs-number">1</span>]
 
-<span class="hljs-meta">&gt;&gt;</span>&gt; arr
+<span class="hljs-meta">&gt;&gt;&gt;</span> arr
 </code></pre>
 
 <h2>f-строки / f-strings</h2>
@@ -255,8 +258,8 @@ numbers[-<span class="hljs-number">3</span><span class="hljs-symbol">:</span>]
 <p>Проще говоря, это возможность вставки значений переменных напрямую в строку. Это выглядит следующим образом:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-meta">&gt;&gt;</span>&gt; age = <span class="hljs-number">19</span>
-<span class="hljs-meta">&gt;&gt;</span>&gt; f<span class="hljs-string">"ваш возраст: {age} лет"</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> age = <span class="hljs-number">19</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> f<span class="hljs-string">"ваш возраст: {age} лет"</span>
 <span class="hljs-string">'ваш возраст: 19 лет'</span>
 </code></pre>
 
@@ -269,8 +272,8 @@ f<span class="hljs-string">" это f-строка ( f-string ) "</span>
 <p>Это даёт строке следующее свойство: возможность вставки в неё переменных, обёрнутых в фигурные скобки, т.е. в <code>{}</code>:</p>
 
 <pre><code class="lang-python">
-<span class="hljs-attribute">var1</span> = <span class="hljs-string">"storage"</span>
-<span class="hljs-attribute">var2</span> = <span class="hljs-number">25</span>
+var1 = <span class="hljs-string">"storage"</span>
+var2 = <span class="hljs-number">25</span>
 
 f<span class="hljs-string">"{var1} store {var2}kg iron"</span>
 </code></pre>
@@ -278,7 +281,7 @@ f<span class="hljs-string">"{var1} store {var2}kg iron"</span>
 <p>А затем это строка преобразуется, т.е. вместо заполнителей ( переменных ) вставятся их значения. Например, такая строка выйдет из предыдущего примера:</p>
 
 <pre><code class="lang-shell">
-<span class="hljs-symbol">'storage</span> store <span class="hljs-number">25</span>kg iron'
+'storage store 25kg iron'
 </code></pre>
 			</section>
 
@@ -294,6 +297,16 @@ f<span class="hljs-string">"{var1} store {var2}kg iron"</span>
 					<li>Какие особенности у среза?</li>
 					<li>Дайте определение термину &quot;f-строка&quot;.</li>
 					<li>Как и где разумно использовать f-строки?</li>
+				</ol>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Практические задания</h2>
+
+				<ol>
+					<li>Проверить все вышепреведённые примеры на практике</li>
+					<li>Попытаться найти новые необычные обороты языка</li>
+					<li>Подумать, как можно использовать подобные возможности</li>
 				</ol>
 			</section>
 		</main>

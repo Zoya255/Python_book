@@ -65,11 +65,11 @@
 
 <p>Разберём на примере:</p>
 
-<pre><code class="lang-text">
-если <span class="hljs-selector-tag">i</span> &lt; <span class="hljs-number">10</span>:
+<pre><code>
+если i &lt; 10:
 	тело_ветви
 
-<span class="hljs-selector-tag">i</span> &lt; <span class="hljs-number">10</span> - условие срабатывания данной ветви ( может быть любым )
+i &lt; 10 - условие срабатывания данной ветви ( может быть любым )
 тело ветви - код, который выполнится, если условие верно
 </code></pre>
 
@@ -77,12 +77,13 @@
 
 <p>Понятное дело, условие должно поддерживаться, чтобы можно было сказать, верно или нет. Например:</p>
 
-<pre><code class="lang-text"><span class="hljs-selector-tag">i</span> = -<span class="hljs-number">1</span>
+<pre><code>
+i = -1
 
-если <span class="hljs-selector-tag">i</span> &lt; <span class="hljs-number">0</span>:
+если i &lt; 0:
 	этот код выполнится
 
-если <span class="hljs-selector-tag">i</span> &gt; <span class="hljs-number">0</span>:
+если i &gt; 0:
 	этот код будет пропущен
 </code></pre>
 
@@ -96,19 +97,19 @@
 
 <p>Условно, это выглядит следующим образом:</p>
 
-<pre><code class="lang-text">
-<span class="hljs-keyword">если</span> условие:
-	основной код, <span class="hljs-keyword">если</span> условие верно
-<span class="hljs-keyword">иначе</span>:
-	запасной код, <span class="hljs-keyword">если</span> условие ложно
+<pre><code>
+если условие:
+	основной код, если условие верно
+иначе:
+	запасной код, если условие ложно
 </code></pre>
 
 <p>Например:</p>
 
-<pre><code class="lang-text">
-<span class="hljs-selector-tag">i</span> = <span class="hljs-number">10</span>
+<pre><code>
+i = 10
 
-если <span class="hljs-selector-tag">i</span> == <span class="hljs-number">5</span>:
+если i == 5:
 	этот код не выполнится
 иначе:
 	этот код выполнится
@@ -124,26 +125,26 @@
 
 <p>Это выглядит примерно вот так:</p>
 
-<pre><code class="lang-text">
-<span class="hljs-keyword">если</span> условие:
-	основной код, <span class="hljs-keyword">если</span> основное условие верно
-<span class="hljs-keyword">иначе</span> <span class="hljs-keyword">если</span> альтернативное условие:
-	запасной код, <span class="hljs-keyword">если</span> основное условие ложно, а альтернативное - верно
-<span class="hljs-keyword">иначе</span>:
-	запасной код, <span class="hljs-keyword">если</span> все условия ложны
+<pre><code>
+если условие:
+	основной код, если основное условие верно
+иначе если альтернативное условие:
+	запасной код, если основное условие ложно, а альтернативное - верно
+иначе:
+	запасной код, если все условия ложны
 </code></pre>
 
 <p>Например:</p>
 
-<pre><code class="lang-text">
-i = <span class="hljs-number">400</span>
+<pre><code>
+i = 400
 
-<span class="hljs-keyword">если</span> i &lt; <span class="hljs-number">100</span>:
-	этот код <span class="hljs-keyword">не</span> выполнится
-<span class="hljs-keyword">иначе</span> <span class="hljs-keyword">если</span> i &gt; <span class="hljs-number">100</span>:
+если i &lt; 100:
+	этот код не выполнится
+иначе если i &gt; 100:
 	этот код выполнится
-<span class="hljs-keyword">иначе</span>:
-	этот код <span class="hljs-keyword">не</span> выполнится
+иначе:
+	этот код не выполнится
 </code></pre>
 			</section>
 
@@ -157,6 +158,15 @@ i = <span class="hljs-number">400</span>
 					<li>Как работает оператор <code>if</code>?</li>
 					<li>Как работает оператор <code>else</code>?</li>
 					<li>Как работает оператор <code>else if</code>?</li>
+				</ol>
+			</section>
+
+			<section class="global__section-content global__block">
+				<h2>Практические задания</h2>
+
+				<ol>
+					<li>Разобраться с сутью операторов ветвления, на примере псевдокода.</li>
+					<li>Построить блок схему, отображающую суть операторов ветвления, разобраться, как это работает в схематичном виде.</li>
 				</ol>
 			</section>
 		</main>
