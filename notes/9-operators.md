@@ -20,7 +20,7 @@
 
 Например:
 
-```shell
+```pycon
 >>> print("I can print a text!")
 I can print a text!
 ```
