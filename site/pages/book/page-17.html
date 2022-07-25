@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Учебник по Python</title>
+
+		<link rel="stylesheet" href="../../css/src/global.css">
+		<link rel="stylesheet" href="../../css/src/global-dark.css">
+		<link rel="stylesheet" href="../../css/src/global-media.css">
+
+		<link rel="stylesheet" href="../../css/ext/monokai.css">
+	</head>
+
+	<body class="global__body">
+		<header class="global__header">
+			<div class="global__header-inner">
+				<span class="global__header-logo">
+					<a class="global__header-logo-link"
+					   href="../../index.html">
+						PyBook
+					</a>
+				</span>
+
+				<span class="global__header-links">
+					<a class="global__header-links-link" href="../../glossary.html">глоссарий</a>
+					<a class="global__header-links-link" href="../../about.html">о системе</a>
+				</span>
+			</div>
+		</header>
+
+		<div class="global__path-wrapper">
+			<div class="global__path global__block">
+				<a class="global__path-link" href="../../index.html">главная страница</a> / <a class="global__path-link" href="../section/section-4.html">раздел 4</a> / глава 17
+			</div>
+		</div>
+
+		<aside class="global__left-aside">
+			<nav class="global__menu global__block">
+				<h3 class="global__menu-title">Подпункты:</h3>
+
+				<ul class="global__menu-list">
+					<li class="global__menu-list-item">Что такое ООП?</li>
+					<li class="global__menu-list-item">Что такое класс?</li>
+					<li class="global__menu-list-item">Что такое метод?</li>
+					<li class="global__menu-list-item">Объекты, классы и методы в Python 3</li>
+					<li class="global__menu-list-item">Немного о декораторах</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main class="global__main">
+			 <section class="global__section-content global__block">
+				<img src="../../img/src/title-17.png" alt="превью главы">
+			</section>
+			
+			<section class="global__section-content global__block">
+<h1>17. Классы и методы</h1>
+
+<p>Теперь, когда вы изучили то, как организованы и работают функции, можно переходить к чуть более сложным, но важным и интересным вещам - таким как собственно ООП.</p>
+
+<h2>Что такое ООП?</h2>
+
+<blockquote>
+    <p>Объектно-ориентированное программирование ( ООП ) - это подход к программированию на основе объектов.</p>
+</blockquote>
+
+<p>ООП позволяет строить программу напрямую из обрабатываемых ей объектов, а не думать об их составляющих. Это значительно ускоряет и облегчает процесс написания кода.</p>
+
+<p>Например, если вы создаёте игру, то ООП позволит создать такие объекты как "машина", "игрок" и "оружие игрока", а затем просто управлять этим объектами, вместо того, чтобы каждый раз думать о глубинных составляющих частях игры.</p>
+
+<p>Такой код выглядел бы примерно так:</p>
+
+<pre><code class="lang-text">
+игрок.пройти_вперёд()
+игрок.взять_оружие('АК-47')
+игрок.пройти_вперёд()
+игрок.сесть_в_машину('Танк')
+</code></pre>
+
+<p>И в самом деле, ООП состоит из объектов. Объектом будем считать игрока ( объект "игрок" ). А всё, что идёт после объекта - это уже действия, доступные игроку ( функции объекта, например, "пройти_вперёд()" ).</p>
+<p>В реальном программировании, такие объекты называются классами, а функции объекта - методами.</p>
+
+<h2>Что такое класс?</h2>
+
+<blockquote>
+    <p>Класс - это именованный проект объекта.</p>
+</blockquote>
+
+<p>Тут важно сразу пояснить, что класс - это не объект. Это разные понятия. Проще говоря, класс - это чертёж дома, а объект - это дом, построенный по чертежу. При этом, дома могут немного разниться между собой, имея при этом абсолютно одинаковый каркас, ибо они сделаны по одному и тому же чертежу.</p>
+
+<p>В программировании это работает точно также. На основе одного и того же класса можно создать множество объектов, они будут иметь одинаковые методы, но при этом разные названия и возможно данные.</p>
+
+<h2>Что такое метод?</h2>
+
+<blockquote>
+    <p>Метод - это функция отдельно взятого класса.</p>
+</blockquote>
+
+<p>Проще, говоря, методы - это действия, производимые какими-либо объектами. Например, у объекта "человек" могут быть такие методы как "ходить", "говорить", "сидеть", "бегать", "прыгать" и т.д. Фактически, можно даже сказать, что классы ( и соответственно получаемые из них объекты ) нужны для группировки методов ( функций ). По этой же причине, классы иногда называют функциями второго порядка ( или нечто подобное ).</p>
+
+<h2>Объекты, классы и методы в Python 3</h2>
+
+<p>Теперь, разберёмся с тем, как же это пишется в коде. Для начала синтаксис:</p>
+
+<pre><code class="lang-python">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ClassName</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">method_name</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, param)</span></span>:
+        <span class="hljs-keyword">return</span> param
+</code></pre>
+
+<p>Здесь:</p>
+
+<ul>
+    <li><code>class</code> - ключевое слово, объявление нового класса</li>
+    <li><code>class_name</code> - это собственно название класса</li>
+</ul>
+
+<blockquote>
+    <p>Примечание: в Python 3 названия классов принято писать в CamelCase, а названия методов - в snake_case.</p>
+</blockquote>
+
+<p>Технически, получился класс, с единственным методом, который просто возвращает переданное ему значение.</p>
+
+<p>Метод пишется точно также, как и функция, но принадлежит классу ( имеет дополнительный отступ ) и включает в себя специальный параметр <code>self</code>.</p>
+
+<p>Параметр <code>self</code> - это специальный параметр функции, который предназначен для "внутренних" обращений к методам и данным класса и при этом не виден "снаружи".</p>
+
+<p>Разберём на примере:</p>
+
+<pre><code class="lang-python">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestData</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, data)</span></span>:
+        <span class="hljs-keyword">self</span>.data = data
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.data
+</code></pre>
+
+<p>Этот класс решает лишь одну прикладную задачу - хранение данных. При инициализации он становится объектом, получает некое значение, хранит его "внутри" себя ( в параметре <code>self</code> ) и может вернуть при помощи метода <code>get()</code>.</p>
+
+<p>Вот как это будет работать:</p>
+
+<pre><code class="lang-python">
+<span class="hljs-meta"># Инициализация объекта</span>
+some_data = TestData(<span class="hljs-number">5</span>)
+
+<span class="hljs-meta"># Какие-то ещё действия</span>
+print( <span class="hljs-string">'Something...'</span> )
+
+<span class="hljs-meta"># Вывод данных из объекта</span>
+print( some_data.<span class="hljs-keyword">get</span>() )
+</code></pre>
+
+<p>Тут рассмотрено три действия:</p>
+
+<ul>
+    <li>Прежде всего, это инициализация. Упрощённо, это превращение класса в объект с задаванием ему имени и параметров. В данном случае класс <code>TestData</code> стал объектом <code>some_data</code> и получил значение <code>5</code>. Уже внутри это значение перешло во внутренний параметр <code>self.data</code>.</li>
+    <li>Далее могут происходить какие-либо иные действия программы, это не важно, ибо объект будет "жить" всё это время и ждать, пока он пригодится.</li>
+    <li>Затем объект снова может использоваться. В примере вызывается его единственный метод <code>get()</code>, возвращающий ранее полученное значение.</li>
+</ul>
+
+<p>Технически, если предположить, что это не конец программы и дальше этот объект больше не будет использоваться, то тогда его нужно уничтожить, дабы не тратить память в пустую. В крупных программах для этого даже применяются такие механизмы, как "сборщики мусора", которые автоматически уничтожают все более не нужные объекты в целях экономии памяти. </p>
+
+<blockquote>
+    <p>Теоретически, к вышеприведённому примеру класса можно даже добавить метод <code>set()</code> для установки нового значения и использования получившегося объекта как переменной. Что в целом не рекомендуется в связи с большими затратами памяти ( в сравнении с обычными переменными ). Однако, это может иметь смысл для создания и хранения собственных типов данных.</p>
+</blockquote>
+
+<h2>Немного о декораторах</h2>
+
+<p>А теперь создадим класс, который будет включать в себя методы для простых математических расчётов:</p>
+
+<pre><code class="lang-python">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EasyMath</span>:</span>
+    @staticmethod
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span><span class="hljs-params">( int1, int2 )</span></span>:
+        <span class="hljs-keyword">return</span> int1 + int2
+
+    @staticmethod
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">minus</span><span class="hljs-params">( int1, int2 )</span></span>:
+        <span class="hljs-keyword">return</span> int1 - int2
+
+    @staticmethod
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">multiply</span><span class="hljs-params">( int1, int2 )</span></span>:
+        <span class="hljs-keyword">return</span> int1 * int2
+
+    @staticmethod
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide</span><span class="hljs-params">( int1, int2 )</span></span>:
+        <span class="hljs-keyword">return</span> int1 / int2
+</code></pre>
+
+<p>Довольно просто, однако у вас должны возникнуть два вопроса:</p>
+
+<ul>
+    <li>Что такое <code>@staticmethod</code>?</li>
+    <li>Куда делся параметр <code>self</code>?</li>
+</ul>
+
+<p>Всё просто: данный класс - это пример обычного группирования функций. Методы в нём статичные, живущие "сами по себе", словно и не принадлежат классу. И поэтому в статичных методах специальный ( и необходимый для всех остальных методов ) параметр <code>self</code> не используется.</p>
+
+<p>Однако метод не может объявить свою "независимость" и статичность сам по себе. Это за него делает специальный декоратор <code>@staticmethod</code>.</p>
+
+<blockquote>
+    <p>Декоратор - это обёрточная функция, которая изменяет поведение идущей за ней функции.</p>
+</blockquote>
+
+<p>Проще говоря декоратор <code>@staticmethod</code> объявляет: "Следующая прямо за мной функция статична!"</p>
+			</section>
+		</main>
+
+		<aside class="global__right-aside">
+
+		</aside>
+
+		<footer class="global__footer">
+			<p class="global__footer-info">Create by Zoya</p>
+			<p class="global__footer-info">2021</p>
+		</footer>
+	</body>
+</html>

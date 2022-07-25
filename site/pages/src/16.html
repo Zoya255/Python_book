@@ -49,7 +49,8 @@
 
 <p>Собственно функция пишется следующим образом:</p>
 
-<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">name_function</span><span class="hljs-params">(input)</span></span>:
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">name_function</span><span class="hljs-params">(input)</span></span>:
     body_function
 </code></pre>
 
@@ -64,7 +65,8 @@
 
 <p>Самый простой пример функции - это пустая ( ничего не делающая ) функция:</p>
 
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">empty_function</span><span class="hljs-params">()</span>:</span>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">empty_function</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">pass</span>
 </code></pre>
 
@@ -78,7 +80,8 @@
 
 <p>Ввод данных в функцию производится при помощи параметров, что давно уже вам известно. Однако теперь разберёмся не с их использованиям, а с их объявлением. Для этого разберём четыре примера казалось бы одной и той же функции, которая принимает какое-либо число и выводит его в консоль.</p>
 
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_int_v1</span><span class="hljs-params">(input_int = <span class="hljs-number">0</span>)</span>:</span>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_int_v1</span><span class="hljs-params">(input_int = <span class="hljs-number">0</span>)</span>:</span>
     print(input_int)
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_int_v2</span><span class="hljs-params">(input_int)</span>:</span>
@@ -105,7 +108,8 @@
 
 <p>Например:</p>
 
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_func</span><span class="hljs-params">()</span>:</span>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_func</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
 
 print(test_func())
@@ -115,7 +119,8 @@ print(test_func())
 
 <h2>Пример более сложной функции</h2>
 
-<pre><code class="lang-python">def body_mass_index(height:<span class="hljs-keyword">int</span>, mass:<span class="hljs-keyword">int</span>):
+<pre><code class="lang-python">
+def body_mass_index(height:<span class="hljs-keyword">int</span>, mass:<span class="hljs-keyword">int</span>):
     <span class="hljs-keyword">if</span> ( (type(height) == <span class="hljs-keyword">int</span>) and (type(mass) == <span class="hljs-keyword">int</span>)):
         bmi = (mass) / ( ( height / 100 ) ** 2 )
         <span class="hljs-keyword">return</span> bmi
