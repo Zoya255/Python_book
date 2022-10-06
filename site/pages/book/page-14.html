@@ -45,6 +45,8 @@
 					<li class="global__menu-list-item">Генератор range()</li>
 					<li class="global__menu-list-item">Использование цикла for как foreach</li>
 					<li class="global__menu-list-item">Цикл while</li>
+					<li class="global__menu-list-item">Дополнительные примеры</li>
+					<li class="global__menu-list-item">Продвинутые примеры</li>
 					<li class="global__menu-list-item">Вопросы для проверки</li>
 					<li class="global__menu-list-item">Практические задания</li>
 				</ul>
@@ -208,6 +210,132 @@ cherry
 6
 8
 </code></pre>
+
+<h2>Дополнительные примеры</h2>
+
+<p>Вот ещё несколько примеров использования циклов для понимания их работы.</p>
+
+<h3>Вывод строки в столбик</h3>
+
+<p>Данный цикл побуквенно выводит строку произвольной длины.</p>
+
+<pre><code class="lang-python">
+<span class="hljs-keyword">string</span> = <span class="hljs-string">"ABCDEF"</span>
+
+<span class="hljs-keyword">for</span> i in <span class="hljs-keyword">range</span>(<span class="hljs-built_in">len</span>(<span class="hljs-keyword">string</span>)):
+    <span class="hljs-built_in">print</span>(<span class="hljs-keyword">string</span>[i])
+</code></pre>
+
+<p>Результат выполнения:</p>
+
+<pre><code class="lang-text">
+A
+B
+C
+D
+E
+F
+</code></pre>
+
+<h3>Вывод строки по диагонали:</h3>
+
+<p>Данный цикл работает точно так же, как и предыдущий, однако каждый раз добавляет отступ, &quot;сдвигая&quot; символы в сторону.</p>
+
+<pre><code class="lang-python">
+<span class="hljs-keyword">string</span> = <span class="hljs-string">"ABCDEF"</span>
+
+<span class="hljs-keyword">for</span> i in <span class="hljs-keyword">range</span>(<span class="hljs-built_in">len</span>(<span class="hljs-keyword">string</span>)):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">" "</span> * i, end=<span class="hljs-string">""</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-keyword">string</span>[i])
+</code></pre>
+
+<p>Результат выполнения:</p>
+
+<pre><code class="lang-text">
+A
+ B
+  C
+   D
+    E
+     F
+</code></pre>
+
+<h3>Бесконечный цикл</h3>
+
+<p>Иногда может быть нужно, чтобы некоторый блок кода выполнялся неопределённое или даже бесконечное количество раз. В этом случае можно использовать бесконечный цикл. Его особенность в том, что он будет работать, пока что-то его не прервёт намеренно.</p>
+
+<p>Самый простой пример бесконечного цикла:</p>
+
+<pre><code class="lang-python">
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+
+<p>Как это работает? Данный цикл имеет всегда верное условие, а значит, всегда работает.</p>
+
+<p>Фактически, можно запустить его используя и другие вечно верные условия, но это не будет так явно и читаемо:</p>
+
+<pre><code class="lang-python">
+<span class="hljs-keyword">while</span> <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>:
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+
+<h3>Перебор массива чисел с проверкой на чётность</h3>
+
+<p>Классическая задача для цикла - перебор массива. В данном случае каждую итерацию цикла производится проверка текущего числа на чётность и вывод результата.</p>
+
+<pre><code>
+arr = [ <span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">22</span>, <span class="hljs-number">14</span>, <span class="hljs-number">13</span>, <span class="hljs-number">7</span>, <span class="hljs-number">19</span>, <span class="hljs-number">42</span>, <span class="hljs-number">63</span>, <span class="hljs-number">51</span> ]
+
+<span class="hljs-keyword">for</span> i in range(<span class="hljs-number">10</span>):
+    <span class="hljs-keyword">if</span> arr[i] % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">print</span>(<span class="hljs-string">'число '</span> + <span class="hljs-keyword">str</span>(arr[i]) + <span class="hljs-string">' чётное'</span>)
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">print</span>(<span class="hljs-string">'число '</span> + <span class="hljs-keyword">str</span>(arr[i]) + <span class="hljs-string">' нечётное'</span>)
+</code></pre><p>Результат работы:</p>
+
+<pre><code class="lang-text">
+число 10 чётное
+число 15 нечётное
+число 22 чётное
+число 14 чётное
+число 13 нечётное
+число 7 нечётное
+число 19 нечётное
+число 42 чётное
+число 63 нечётное
+число 51 нечётное
+</code></pre>
+
+<h2>Продвинутые примеры</h2>
+
+<p>Это примеры, которые содержат ещё не пройденные здесь элементы. Их устройство будет разобрано в следующих разделах.</p>
+
+<h3>Вывод случайных чисел</h3>
+
+<p>Данный код выведет 10 случайных трёхзначных чисел. Для их генерации используется стандартная библиотека Python. Использование подключаемых библиотек будет рассмотрено в следующих главах.</p>
+
+<pre><code class="lang-python">
+import <span class="hljs-built_in">random</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">random</span>.randint(<span class="hljs-number">100</span>, <span class="hljs-number">999</span>))
+</code></pre>
+
+<p>Результат работы:</p>
+
+<pre><code class="lang-text">
+512
+140
+699
+408
+922
+424
+958
+468
+863
+985
+</code></pre>
 			</section>
 
 			<section class="global__section-content global__block">
@@ -221,6 +349,8 @@ cherry
 					<li>Что такое цикл &quot;for&quot;?</li>
 					<li>Что такое цикл &quot;while&quot;?</li>
 					<li>В чём ключевые отличия циклов &quot;for&quot; и &quot;while&quot;?</li>
+					<li>Что такое бесконечный цикл?</li>
+					<li>Для каких задач может применятся бесконечный цикл?</li>
 				</ol>
 			</section>
 
